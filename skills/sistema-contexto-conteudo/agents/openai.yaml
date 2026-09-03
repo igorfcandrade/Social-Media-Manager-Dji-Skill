@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sistema de Contexto de Conteúdo"
+  short_description: "Mantém o contexto de marca completo e atual"
+  default_prompt: "Usa $sistema-contexto-conteudo para auditar ou preparar os ficheiros de contexto deste projeto antes de criar conteúdo."
