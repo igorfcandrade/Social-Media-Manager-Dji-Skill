@@ -9,6 +9,10 @@ description: "Escreve o comentário que a marca fixa numa publicação de Instag
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. O critério de comunidade, moderação, isco de interação e a mecânica de puxar para privado vive em `../social-media-manager/references/06-comunidade-e-dm.md`. A anatomia da peça e a escada de atrito vivem em `../social-media-manager/references/04-criacao-de-conteudo.md`. **Ler os dois antes de escrever e não os repetir aqui.**
 
 ## O que corrigi face à prática corrente
@@ -41,13 +45,14 @@ Ao disparar, ir direto ao Passo 0. Não resumir a skill.
 
 ## Passo 0. Perfil e peça
 
-1. Ler o perfil (`PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`) — secções 1 (Negócio), 4 (Plataformas), 5 (Voz), 6 (O que se pode e não se pode afirmar) e 9 (Conversa e atendimento). A secção 9 contém a **janela de resposta declarada**, e é ela que entra no comentário, não uma promessa inventada.
+1. Ler o perfil (disponível na mensagem, anexos, fontes ligadas ou documentos do projeto) — secções 1 (Negócio), 4 (Plataformas), 5 (Voz), 6 (O que se pode e não se pode afirmar) e 9 (Conversa e atendimento). A secção 9 contém a **janela de resposta declarada**, e é ela que entra no comentário, não uma promessa inventada.
 2. Ler a publicação a que o comentário se cola. **Sem a peça, não há comentário fixado** — pedir o texto ou o ficheiro e parar.
-3. Se o perfil não existir, copiá-lo de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` e preenchê-lo **em conversa com quem sabe** — os campos por responder ficam `POR DEFINIR`, não se adivinham. **Parar antes de escrever preços, prazos ou condições.**
+3. Sem contexto, pedir apenas os factos indispensáveis e marcar o resto `POR CONFIRMAR`. Não criar
+   uma fonte automaticamente. Parar antes de escrever preços, prazos ou condições não confirmados.
 
 ## Passo 1. Recolher
 
-**AskUserQuestion**, um lote só, **saltando o que o perfil já responde** — as plataformas estão na secção 4 e não se perguntam outra vez. **Se `AskUserQuestion` não existir neste ambiente, fazer exatamente as mesmas perguntas em texto corrido, numeradas, com as opções por letra, num único turno.** A ferramenta muda a apresentação, não o conteúdo: esta skill não precisa de chave de API nem de ferramenta instalada em passo nenhum, e chega ao fim sem nada disso.
+**Perguntar num único lote pelo meio interativo disponível**, saltando o que o contexto já responde.
 
 ```json
 [

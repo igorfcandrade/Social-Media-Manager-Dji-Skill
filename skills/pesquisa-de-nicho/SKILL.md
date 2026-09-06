@@ -9,18 +9,23 @@ description: "Pesquisa tendências, formatos, conversas, lacunas e concorrência
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. O critério — as três perguntas de uma tendência, o método de análise de concorrência, o que não se vê de fora, análise de lacunas, parcerias — vive em `../social-media-manager/references/09-tendencias-e-concorrencia.md`. **Ler esse módulo antes de pesquisar e não o repetir aqui.** Para riscos de áudio e direitos, `../social-media-manager/references/10-risco-crise-e-conformidade.md`.
 
 ## Arranque imediato
 
 Ao disparar, ir direto ao Passo 0. Não resumir a skill, não explicar o método de pesquisa.
 
-## Passo 0. Perfil de marca — bloqueante
+## Passo 0. Contexto do caso
 
-Procurar `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/`.
+Procurar o contexto do caso disponível na mensagem, anexos, fontes ligadas ou documentos do projeto.
 
 - **Se existir**, lê-lo primeiro: secção 1 (o que se vende, área geográfica, sazonalidade real), 3 (Público e as suas perguntas), 4 (Plataformas), 5 (Voz — a primeira das três perguntas de uma tendência é "soa à marca?"), 6 (o que não se pode afirmar), 7 (Pilares), 10 (datas já recusadas).
-- **Se não existir**, copiá-lo de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` e **parar até estarem preenchidas as secções 1, 3 e 5**. Sem elas não há como responder "isto soa à marca?", e a skill degenera numa lista de tendências que servem a toda a gente. O que não se souber fica `POR DEFINIR` — nunca preenchido por adivinhação.
+- **Se não existir**, pedir oferta, público e voz apenas quando forem necessários para filtrar os
+  resultados. Sem eles, a pesquisa pode mapear sinais, mas não recomendar adesão em nome da marca.
 - **Em conflito entre o perfil e esta skill, manda o perfil.** Ele conhece o negócio; esta skill não. E não criar ficheiros paralelos de contexto: tudo o que for facto da marca vai para o perfil.
 - **O conjunto competitivo vive no perfil.** O modelo não tem campo próprio para ele: acrescentá-lo à **secção 3 (Público)**, sob o título `Conjunto competitivo`, com as contas listadas e a data em que a lista foi fixada. **Manter a lista fixa pelo menos 6 meses** e rever o conjunto semestralmente — mudar as contas incluídas entre períodos destrói a série.
 
@@ -49,7 +54,7 @@ O recap não cria uma automatização, não se agenda e não se inicia por chega
 
 ## Passo 1. Enquadrar a pesquisa
 
-**AskUserQuestion**, um lote só:
+**Perguntar num único lote pelo meio interativo disponível**:
 
 ```json
 [
@@ -77,9 +82,10 @@ O recap não cria uma automatização, não se agenda e não se inicia por chega
 |---|---|---|
 | **Guiado (funciona sempre)** | Não há acesso à web nenhum: dar ao utilizador a lista de endereços do Passo 3, os filtros exatos a aplicar (país: Portugal, período) e o que copiar de cada um, e trabalhar sobre o que ele colar | Chega ao fim e produz a tabela. Mais lento, e a data e a origem de cada linha passam a ser declaradas por quem colou — registar isso na coluna da fonte. |
 | **Manual (por defeito)** | `WebSearch` e `WebFetch` sobre as fontes gratuitas do Passo 3 | Cobre páginas públicas como Google Trends, biblioteca de anúncios da Meta, avaliações e anúncios oficiais. **Funciona sem nada instalado.** |
-| **Melhorado** | Navegador (Claude para Chrome ou equivalente), se estiver disponível **e o utilizador autorizar** | Permite ver os áudios em ascensão dentro do Instagram na conta própria e ler o painel profissional. TikTok está `LOOK INTO` e não entra neste caminho. |
+| **Com acesso autorizado à conta** | Meio capaz de abrir a aplicação ou conta real | Permite ver sinais internos que páginas públicas não mostram. TikTok está `LOOK INTO` e não entra neste caminho. |
 
-Antes de escolher, **verificar mesmo** se as ferramentas existem — não assumir. Sem `WebSearch`/`WebFetch`, ir pelo caminho guiado e dizê-lo no cabeçalho da entrega.
+Antes de escolher, verificar que meios existem e estão autorizados. Sem acesso à web, seguir pelo
+caminho guiado e dizê-lo no cabeçalho da entrega.
 
 **O que se perde no caminho manual, dito com honestidade:** os áudios em tendência dentro da aplicação do Instagram (a seta a subir ao lado do nome do áudio) e o separador de áudios do painel profissional **só se veem com sessão iniciada na conta, no telemóvel**. No caminho manual, esses ficam por verificar — e a skill diz isso na entrega em vez de fingir que os viu.
 

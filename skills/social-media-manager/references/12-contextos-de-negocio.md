@@ -1,12 +1,15 @@
 # 12 — Contextos de negócio
 
-O resto da skill descreve o ofício. Este módulo corrige-o para os casos em que as regras gerais assumem uma forma de negócio que não é a do projeto em mãos.
+O resto da skill descreve o ofício. Este módulo adapta o método às diferenças estruturais entre
+organizações; nenhuma das variantes é tratada como caso base.
 
-**Ler o contexto que se aplica antes de aplicar os outros módulos.** Se nenhum se aplicar, os módulos gerais bastam — eles assumem por defeito **consumo frequente**, que é a primeira linha da tabela e a única sem secção própria por isso mesmo.
+**Ler o contexto que se aplica antes dos outros módulos.** Se nenhuma variante cobrir o caso,
+aplicar apenas os princípios gerais e pedir os dados estruturais que realmente mudem a decisão.
 
 Um projeto pode cair em mais do que um contexto: uma clínica é **local** e **setor regulado**, e um restaurante é **local** e de **ritmo diário**. Nesse caso lêem-se os dois, e onde colidirem manda o mais restritivo.
 
-> ⚠️ **O viés que este módulo existe para corrigir:** a maior parte do material sobre redes sociais — e boa parte do resto desta skill — assume um negócio que vende a consumidores, com ciclo curto, e onde a venda se fecha por conversa. Isso descreve uma pastelaria, não uma clínica, nem uma empresa de software, nem uma associação.
+> ⚠️ **Viés a evitar:** grande parte do material sobre redes sociais assume venda a consumidores,
+> ciclo curto e fecho por conversa. Não transportar esse modelo para outro caso sem confirmação.
 
 ## O que muda entre tipos de negócio
 

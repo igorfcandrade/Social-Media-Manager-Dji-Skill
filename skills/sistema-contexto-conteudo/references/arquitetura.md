@@ -20,7 +20,8 @@ CAMPANHAS/
 └── _TEMPLATE-BRIEF.md
 ```
 
-Os nomes podem mudar, mas o manifesto deve mapear os equivalentes. Evitar ficheiros genéricos como `MEMORY.md` sem âmbito e caminho canónico.
+Os nomes podem mudar, mas um índice, quando existir, deve mapear os equivalentes. Evitar agregadores
+genéricos sem âmbito nem precedência declarados.
 
 ## Extensões condicionais
 

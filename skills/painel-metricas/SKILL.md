@@ -1,6 +1,6 @@
 ---
 name: painel-metricas
-description: "Transforma exportações de Instagram, Facebook e Google Business Profile num painel legível e num relatório que termina em decisões com ação, quantidade, prazo e responsável. Usa sempre que o pedido envolver números, desempenho, análise de dados, painel ou relatório de redes sociais. TikTok fica LOOK INTO até revisão própria."
+description: "Transforma dados ou exportações de redes sociais fornecidos num painel e relatório acionável. Usa para analisar um conjunto de dados concreto. Não define a estratégia de medição do zero nem inventa métricas ausentes; pedidos amplos de diagnóstico pertencem à social-media-manager."
 ---
 
 # Painel de métricas
@@ -9,24 +9,27 @@ description: "Transforma exportações de Instagram, Facebook e Google Business 
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. Todo o critério — regressão à média, incomparabilidade das fórmulas, atribuição, mediana vs média, estrutura do relatório — vive em `../social-media-manager/references/07-analise-e-relatorio.md`. **Ler esse módulo antes de tocar nos dados e não o repetir aqui.** Para o negócio com morada física, `../social-media-manager/references/12-contextos-de-negocio.md`. Para benchmarks, `../social-media-manager/references/11-numeros-de-referencia.md`. Modelo de relatório em `../social-media-manager/assets/relatorio-mensal-modelo.md`.
 
 ## Arranque imediato
 
 Ao disparar, ir direto ao Passo 0. Não resumir a skill, não explicar a metodologia antes de a aplicar.
 
-## Passo 0. Perfil de marca — bloqueante
+## Passo 0. Contexto do caso
 
-Procurar `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/`.
-
-- **Se existir**, lê-lo primeiro. São indispensáveis: secção 2 (objetivo, métrica-norte, indicadores, **alvos fixados antes de medir**, linha de base com data), secção 8 (cadência), secção 11 (aprendizagens) e secção 12 (**fórmula de taxa e denominador escolhidos**).
-- **Se não existir**, copiá-lo de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` e **parar até estar preenchida a secção 2**. Sem alvo fixado antes, qualquer resultado se narra como sucesso — e o relatório não serve para nada.
-- **Se a secção 12 não tiver fórmula escolhida**, escolhê-la agora, escrevê-la lá, e não a mudar durante o ano.
-- **Em conflito entre o perfil e esta skill, manda o perfil.** Ele conhece o negócio, a sazonalidade e quem lê o relatório; esta skill não. Nada de contexto de marca se escreve a partir daqui, e não se cria nenhum ficheiro paralelo de métricas ou de voz — o que se aprende volta para as secções 11 e 12 do perfil.
+Localizar e ler objetivo, métrica-norte, indicadores, alvos definidos antes da medição, linha de base,
+cadência, aprendizagens e fórmula de taxa. Não exigir que estejam num ficheiro ou esquema específico.
+Sem objetivo e alvo prévios, é possível descrever os dados, mas não classificar o resultado como
+sucesso ou fracasso. Se faltar uma fórmula, propô-la e obter confirmação antes de a fixar; não a
+mudar entre períodos comparáveis.
 
 ## Passo 1. Recolher as exportações
 
-**Nada aqui exige API, ferramenta paga ou ligação autenticada.** O caminho manual é a exportação que qualquer pessoa descarrega. **AskUserQuestion**, um lote só:
+**Nada aqui exige API, ferramenta paga ou ligação autenticada.** O caminho manual é a exportação que qualquer pessoa descarrega. **Perguntar num único lote pelo meio interativo disponível**:
 
 ```json
 [
@@ -66,7 +69,9 @@ As duas últimas linhas só se aplicam se houver site. Manter a marcação de co
 
 **Ação imediata, irreversível se adiada:** se a retenção do Google Analytics estiver no valor mais curto, **recomendar mudar hoje** para o mais longo. É uma definição de conta de quem é dono dela — a decisão e o clique são humanos. Os dados que expiram não voltam.
 
-**Estabelecer a rotina de exportação mensal** para pasta própria (`Social Media/dados/AAAA-MM/`). Sem isto, ao fim de um ano não há com que comparar e a linha de base deixa de existir.
+**Recomendar uma rotina de exportação mensal** para o arquivo escolhido pelo caso. Sem isso, os dados
+podem expirar e deixar de ser comparáveis. Não impor uma pasta ou alterar o sistema de arquivo sem
+autorização.
 
 ## Passo 3. Ler os dados sem os estragar
 

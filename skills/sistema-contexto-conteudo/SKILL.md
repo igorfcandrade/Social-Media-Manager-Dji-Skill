@@ -1,6 +1,6 @@
 ---
 name: sistema-contexto-conteudo
-description: Audita, cria e mantém os ficheiros de contexto necessários para produzir conteúdo de marca atual e multicanal. Usar ao preparar um novo projeto de conteúdo, rever fontes de verdade, detetar dados em falta ou desatualizados, ou antes de campanhas que dependam de marca, oferta, operações, canais, ativos, métricas ou conformidade.
+description: Audita, estrutura e mantém o contexto necessário para produzir conteúdo de marca atual e multicanal. Usa ao preparar um projeto, rever fontes de verdade ou detetar dados em falta. Aceita contexto em qualquer formato e só cria ficheiros quando a pessoa pede uma estrutura documental.
 ---
 
 # Sistema de contexto de conteúdo

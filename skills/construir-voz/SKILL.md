@@ -1,6 +1,6 @@
 ---
 name: construir-voz
-description: "Extrai a voz e o público de uma marca a partir de textos reais que ela já escreveu, mais uma entrevista curta, e escreve o resultado nas secções 3 (Público) e 5 (Voz) do perfil de marca do projeto. Usa esta skill SEMPRE que o trabalho depender de saber como a marca soa e ainda não houver perfil preenchido — e também quando o pedido for vago (ex.: \"aprende a minha voz\", \"como é que devo escrever?\", \"quero que soe a mim\", \"define o tom da marca\", \"o texto não soa a nós\", \"monta o meu sistema de conteúdo\", \"vamos começar as redes do zero\", \"treina nos meus textos\", \"tenho aqui uns posts antigos, vê o estilo\"). Dispara também quando alguém colar um punhado de textos antigos no início de um projeto sem dizer para que são. Não cria ficheiros de voz paralelos: escreve no perfil."
+description: "Extrai público e voz de marca a partir de textos reais e de uma entrevista curta. Usa quando pedirem para aprender, definir, rever ou documentar a voz, ou quando conteúdo fornecido deva servir de amostra de estilo. Atualiza uma fonte canónica apenas com autorização; de outro modo entrega o resultado copiável."
 ---
 
 # Construir voz
@@ -8,6 +8,10 @@ description: "Extrai a voz e o público de uma marca a partir de textos reais qu
 ## Gate de revisão
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
+
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
 
 Skill de execução. O julgamento sobre o que é uma boa voz vive em `../social-media-manager/references/02-voz-e-mensagem.md` — ler esse módulo antes de começar e não repetir aqui o que ele já diz.
 
@@ -17,19 +21,18 @@ No momento em que esta skill é carregada ou disparada, executar o Passo 0 e dep
 
 **Não fazer:** resumir a skill · explicar que ficheiros vai produzir · perguntar se o utilizador quer avançar · confirmar a instalação · oferecer opções do tipo "queres que corra isto agora?".
 
-## Passo 0. Encontrar (ou criar) o perfil de marca
+## Passo 0. Obter o contexto da marca
 
-1. Procurar no projeto: `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/`.
-2. **Se existir**, ler as secções 1, 3, 5 e 6 antes de perguntar seja o que for. Não voltar a perguntar o que já lá está preenchido — dizer ao utilizador o que foi aproveitado.
-3. **Se não existir**, copiar `../social-media-manager/assets/PERFIL-MARCA-modelo.md` para `PERFIL-SOCIAL.md` na raiz do projeto e dizê-lo numa linha. Esta skill preenche as secções **3 (Público)** e **5 (Voz)**; as restantes ficam `POR DEFINIR`.
-4. Se o projeto já tiver uma skill própria de voz, **ela ganha**. Perguntar antes de escrever por cima.
-5. Se as secções 3 ou 5 já estiverem preenchidas (e não `POR DEFINIR`), **não escrever por cima sem perguntar**. Mostrar o que lá está e perguntar se se refaz, se se acrescenta, ou se se para aqui.
+1. Localizar o contexto disponível pelo significado, não pelo nome ou formato.
+2. Ler identidade, público, voz e alegações antes de perguntar. Não repetir perguntas já respondidas.
+3. Sem contexto persistente, fazer a entrevista e entregar o resultado de forma copiável; oferecer o
+   modelo do pacote apenas se a pessoa quiser criar uma fonte estruturada.
+4. Se já existirem regras de voz, elas ganham. Perguntar antes de as substituir.
 
 ## Passo 1. Entrevista
 
-**Caminho preferido:** a ferramenta **AskUserQuestion**, que apresenta as opções para o utilizador escolher em vez de as escrever. O limite de perguntas por chamada é da ferramenta, não desta skill — se couberem quatro, são duas chamadas; se couberem menos, mais chamadas.
-
-**Caminho manual, se a ferramenta não estiver disponível** (e este caminho tem de chegar ao fim sozinho): fazer as mesmas perguntas em conversa, numeradas, **um lote de cada vez**, com as opções escritas como lista e a indicação de que se pode responder pelo número ou por palavras próprias. O conteúdo das perguntas é o mesmo; muda só a forma de as apresentar. Nada nesta skill depende de a ferramenta existir.
+Apresentar as perguntas pelo meio interativo disponível, em lotes legíveis, com liberdade para
+responder pelas opções ou por palavras próprias. O conteúdo das perguntas não depende da interface.
 
 ### Lote 1 (a tua primeira ação, sem texto antes)
 
@@ -108,7 +111,8 @@ Dizer isto, tal e qual:
 >
 > Se tiveres poucos, diz-me — trabalha-se com o que há, mas a voz sai mais frouxa e eu vou marcá-lo no perfil como provisória.
 >
-> Antes de colares: **tira nomes, moradas, contactos e números de encomenda de clientes**. Estes textos vão ficar guardados no ficheiro de perfil do projeto, e o que interessa é como escreves, não quem é a pessoa do outro lado.
+> Antes de colares: **tira nomes, moradas, contactos e números de encomenda de clientes**. O que
+> interessa é como escreves, não quem é a pessoa do outro lado.
 
 Se vierem dados pessoais de clientes na mesma, **substituí-los por marcadores** (`[nome]`, `[morada]`) antes de escrever seja o que for no perfil. Um texto de cliente com nome só se guarda ou publica com consentimento para esse fim — ver `10-risco-crise-e-conformidade.md`.
 
@@ -140,9 +144,11 @@ Padrões que atravessam vários textos, nunca tiques de um só.
 
 **Contradições** — se dois textos aprovados se contradizem, escrever a contradição no perfil em vez de a alisar.
 
-## Passo 5. Escrever no perfil
+## Passo 5. Devolver a voz ao contexto
 
-Editar `PERFIL-SOCIAL.md` (ou o ficheiro equivalente do projeto). **Não criar `about-me.md` nem `voice.md`.**
+Com autorização e meio de escrita, atualizar a fonte canónica já existente. Sem ambos, entregar o
+bloco completo de público e voz para a pessoa o guardar onde mantém o contexto. Não inventar um nome
+ou criar uma segunda fonte.
 
 **Secção 3 — Público:** quem é em comportamento · o que já pergunta com frequência (usar as respostas do Lote 2) · objeções que aparecem sempre · o que a concorrência diz e nós não.
 
@@ -162,7 +168,8 @@ Se aparecerem alegações que a marca faz sem prova, não as escrever na secçã
 
 Mostrar as duas secções escritas, em bloco de código, para o utilizador poder corrigir de imediato. **A voz não fica fechada aqui:** o módulo `02-voz-e-mensagem.md` diz que aplicar uma voz é delegável mas defini-la não — a versão escrita é uma proposta derivada dos textos até quem é dono do negócio a confirmar. Dizê-lo em voz alta e esperar pela correção antes de a tratar como definitiva.
 
-> As secções **3 (Público)** e **5 (Voz)** do `PERFIL-SOCIAL.md` estão preenchidas. A partir de agora, qualquer texto que eu escrever neste projeto sai daqui — e em caso de conflito entre esta skill e o perfil, manda o perfil.
+> O público e a voz ficaram registados na fonte canónica do caso. A partir de agora, qualquer texto
+> deste projeto usa essa fonte — e, em caso de conflito, manda o contexto do caso.
 >
 > A seguir podes dizer:
 > - "faz o calendário do mês" — planeamento editorial
@@ -177,7 +184,7 @@ Mostrar as duas secções escritas, em bloco de código, para o utilizador poder
 - Ao disparar, ir direto ao Passo 0. Sem resumo, sem preâmbulo.
 - Alvo de **10 a 20 textos** — é o número do módulo `02-voz-e-mensagem.md`. Abaixo disso trabalha-se na mesma, mas escreve-se no perfil que a voz é provisória e porquê.
 - ◐ Prática, sem estudo por trás: com **menos de meia dúzia de textos** um padrão não se distingue de um tique de um texto só. Não é um limiar medido — é o ponto a partir do qual não se deve afirmar que uma regra é da casa. Abaixo dele, escrever as observações como hipóteses e não como regras.
-- Nenhuma ferramenta é obrigatória. Se `AskUserQuestion` não existir, a entrevista faz-se em conversa e a skill chega ao fim na mesma.
+- Nenhuma ferramenta é obrigatória. A entrevista adapta-se ao meio interativo disponível e chega ao fim sem ferramenta especial.
 - Não guardar dados pessoais de clientes nos exemplos colados no perfil.
 - Trabalhar só do que está nos textos. Não inventar padrões nem fontes.
 - Português europeu em tudo o que se escreve, incluindo as perguntas.

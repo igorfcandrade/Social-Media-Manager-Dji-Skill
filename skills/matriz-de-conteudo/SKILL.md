@@ -1,6 +1,6 @@
 ---
 name: matriz-de-conteudo
-description: "Gera uma matriz de ideias de conteúdo cruzando os pilares da marca com formatos e ângulos concretos, cada célula com um título específico e pronto a produzir, classificado em Hero/Hub/Help. Usa esta skill SEMPRE que faltarem ideias ou for preciso encher um mês, mesmo em palavras vagas (ex.: \"dá-me ideias de posts\", \"sobre o que é que publicamos?\", \"estou sem ideias\", \"matriz de conteúdo\", \"gera-me trinta ideias\", \"o que ponho no calendário deste mês?\", \"preciso de encher a semana\", \"quais são os nossos pilares?\", \"ajuda-me a definir pilares\"). Produz ideias, não o calendário datado nem o texto final dos posts."
+description: "Gera um banco ou matriz de ideias ao cruzar pilares, formatos e ângulos concretos. Usa quando pedirem ideias, temas, pilares ou uma matriz sem datas. Produz ideias, não calendário datado, estratégia completa nem texto final."
 ---
 
 # Matriz de conteúdo
@@ -9,18 +9,23 @@ description: "Gera uma matriz de ideias de conteúdo cruzando os pilares da marc
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. O critério — como se escolhem pilares, o contra-âmbito, Hero/Hub/Help, o folclore dos rácios, banco de ideias — vive em `../social-media-manager/references/03-planeamento-e-calendario.md`. **Ler esse módulo antes de gerar seja o que for e não o repetir aqui.** Para o formato de cada peça, `../social-media-manager/references/04-criacao-de-conteudo.md`.
 
 ## Arranque imediato
 
 Ao disparar, ir direto ao Passo 0. Não resumir a skill, não explicar a matriz antes de a construir.
 
-## Passo 0. Perfil de marca — bloqueante
+## Passo 0. Contexto do caso
 
-Procurar `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/`.
+Procurar o contexto do caso disponível na mensagem, anexos, fontes ligadas ou documentos do projeto.
 
 - **Se existir**, lê-lo primeiro: secção 1 (Negócio, incluindo **ciclo de decisão**), 3 (Público e as perguntas que já faz), 4 (Plataformas), 6 (o que se pode afirmar), 7 (**Pilares com âmbito e contra-âmbito**), 8 (cadência real), 10 (datas aceites e recusadas), 11 (aprendizagens). Dizer numa linha o que foi aproveitado e **não voltar a perguntar o que já lá está**.
-- **Se não existir**, copiá-lo de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` para `PERFIL-SOCIAL.md` e **parar até estarem preenchidas as secções 1 (Negócio) e 3 (Público)**. Sem essas duas, a matriz dá ideias que serviriam igualmente a um concorrente com o nome trocado — que é exatamente o sinal de alarme do módulo 03. A secção 7 (Pilares) **não bloqueia**: é o Passo 1 que a preenche.
+- **Se não existir**, pedir oferta e público. Sem ambos, parar: a matriz daria ideias igualmente
+  aplicáveis a um concorrente. Os pilares não bloqueiam; o Passo 1 pode propô-los.
 - **Sem ferramentas de ficheiro** (não se consegue ler nem escrever no projeto), a skill não para: perguntar em conversa o conteúdo das secções 1 e 3, trabalhar com as respostas, e entregar no fim o texto do perfil e da matriz para a pessoa colar num ficheiro seu. Nenhum passo desta skill exige chave de API, ferramenta instalada ou serviço pago.
 - **Não criar ficheiros de contexto paralelos** — nada de `pilares.md`, `ideias.md` ou equivalente. O que é da marca escreve-se no perfil.
 - **Em conflito entre esta skill e o perfil, manda o perfil.**
@@ -30,7 +35,7 @@ Procurar `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social
 
 Se a secção 7 do perfil tiver 3 a 5 pilares com contra-âmbito, usá-los tal como estão e passar ao Passo 2.
 
-Se faltarem ou estiverem vagos, **AskUserQuestion**. **Se `AskUserQuestion` não existir neste ambiente, fazer exatamente a mesma pergunta em texto corrido, com as opções por letra, num único turno.** A ferramenta muda a apresentação, não o conteúdo.
+Se faltarem ou estiverem vagos, apresentar as opções num único lote pelo meio interativo disponível.
 
 ```json
 [

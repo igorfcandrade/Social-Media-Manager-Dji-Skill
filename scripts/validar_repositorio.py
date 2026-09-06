@@ -12,6 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "skills"
 NOTICE = "Skill necessita de revisão"
 
+FORBIDDEN_SKILL_MARKERS = (
+    "AskUserQuestion",
+    "CLAUDE.md",
+    "MEMORY.md",
+    "APIFY_API_TOKEN",
+    "GOOGLE_AI_API_KEY",
+    "Claude para Chrome",
+    "Doces " + "Mimi" + "nhos",
+    "Marisa",
+)
+
 NOTICE_EXEMPT_SKILLS = {"sistema-contexto-conteudo"}
 SKILL_NOTICE_CONSUMERS = tuple(
     str(path.relative_to(ROOT))
@@ -54,6 +65,18 @@ def main() -> int:
     errors: list[str] = []
     skill_paths = sorted(SKILLS.glob("*/SKILL.md"))
 
+    for path in sorted(SKILLS.rglob("*")):
+        if not path.is_file() or path.suffix not in {".md", ".py", ".csv"}:
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        relative = path.relative_to(ROOT)
+        for marker in FORBIDDEN_SKILL_MARKERS:
+            if marker in text:
+                fail(
+                    errors,
+                    f"{relative}: dependência de caso ou ambiente não permitida: {marker}",
+                )
+
     for path in skill_paths:
         text = path.read_text(encoding="utf-8")
         block = frontmatter(text)
@@ -74,6 +97,10 @@ def main() -> int:
         if not description:
             fail(errors, f"{relative}: description ausente")
 
+        if path.parent.name not in {"social-media-manager", "sistema-contexto-conteudo"}:
+            if "references/contexto-do-caso.md" not in text:
+                fail(errors, f"{relative}: falta o contrato de contexto agnóstico")
+
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     count_match = re.search(r"Conjunto de \*\*(\d+) skills\*\*", readme)
     if not count_match:
@@ -84,6 +111,27 @@ def main() -> int:
             "README.md: contagem de skills diverge das pastas "
             f"({count_match.group(1)} != {len(skill_paths)})",
         )
+
+    context_contract = (
+        ROOT
+        / "skills"
+        / "social-media-manager"
+        / "references"
+        / "contexto-do-caso.md"
+    )
+    if not context_contract.exists():
+        fail(errors, "falta o contrato universal de contexto do caso")
+    else:
+        contract_text = context_contract.read_text(encoding="utf-8")
+        for marker in (
+            "qualquer organização",
+            "com ou sem website",
+            "Não exigir um nome de ficheiro",
+            "Não tratar a ausência de website",
+            "Não exigir o nome de uma ferramenta",
+        ):
+            if marker not in contract_text:
+                fail(errors, f"contrato de contexto: falta '{marker}'")
 
     for relative in NOTICE_CONSUMERS:
         path = ROOT / relative

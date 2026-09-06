@@ -1,6 +1,6 @@
 ---
 name: escrever-post
-description: "Escreve uma peça pronta a publicar para Instagram, Facebook, Reels ou Shorts, a partir do perfil de marca — gancho, corpo, uma chamada à ação e acessibilidade. Usa sempre que pedirem texto para redes sociais, legenda, post, guião de Reel/Short ou transformação de notas em conteúdo. TikTok fica LOOK INTO até revisão própria. Não planeia o mês — para isso é o calendário."
+description: "Escreve o texto de uma publicação social concreta a partir do contexto do caso — gancho, corpo, uma chamada à ação e acessibilidade. Usa para legendas e posts de texto ou imagem única. Não planeia calendários, não cria carrosséis e não escreve guiões completos de vídeo; essas tarefas têm executores próprios."
 ---
 
 # Escrever post
@@ -9,24 +9,26 @@ description: "Escreve uma peça pronta a publicar para Instagram, Facebook, Reel
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. O critério — anatomia em cinco camadas, técnicas de gancho, extensão e o corte do "ver mais", motores de partilha, acessibilidade — vive em `../social-media-manager/references/04-criacao-de-conteudo.md`. **Ler esse módulo antes de escrever e não o repetir aqui.** Para sinais e limites de cada plataforma, `../social-media-manager/references/05-plataformas.md`; se a decisão usar um ID PLAT, ler o registo em `../social-media-manager/references/05-estado-das-plataformas.md`. Para a voz, a secção 5 do perfil de marca.
 
 ## Arranque imediato
 
 Ao disparar, ir direto ao Passo 0 e ao Passo 1. Não resumir a skill, não explicar o que faz, não listar os ficheiros que vai ler, não perguntar se se avança.
 
-## Passo 0. Perfil de marca — bloqueante
+## Passo 0. Contexto do caso
 
-Procurar no projeto: `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/`.
-
-- **Se existir**, lê-lo antes de tudo. Aproveitar as secções 1 (Negócio), 3 (Público), 4 (Plataformas), 5 (Voz), 6 (Alegações), 7 (Pilares) e 8 (quem aparece em câmara e meios de produção — o Passo 4 precisa dela para a indicação visual), e **dizer numa linha o que foi aproveitado**. Não voltar a perguntar o que já lá está.
-- **Se não existir**, copiá-lo de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` para `PERFIL-SOCIAL.md` na raiz do projeto e **parar até estar preenchido no mínimo nas secções 3 e 5**. Dizer: *"Sem perfil, o que eu escrever é plausível e vazio. Diz \"constrói a voz\" e eu preencho as secções 3 e 5 contigo."*
-- **Em conflito entre esta skill e o perfil, manda o perfil.** Se o projeto tiver skill própria de voz, essa ganha sobre a secção 5.
-- **Preços, prazos, disponibilidade, condições de envio e nomes de produto vêm do perfil ou de quem sabe. Nunca estimar.** Se faltarem, escrever o post com `[POR CONFIRMAR]` no sítio exato e assinalá-lo na entrega.
+Localizar e ler, quando existirem, oferta, público, plataformas, voz, alegações, pilares e capacidade
+de produção. Não exigir uma estrutura documental. Sem voz ou público suficientes, pedir esses dados;
+se a pessoa preferir avançar, declarar que a versão é genérica. Preços, prazos, disponibilidade,
+condições e nomes de produto nunca se estimam: usar `[POR CONFIRMAR]` no sítio exato.
 
 ## Passo 1. Recolher o que falta
 
-**AskUserQuestion**, um lote só, saltando o que o perfil já responde. **Se `AskUserQuestion` não existir neste ambiente, fazer as mesmas perguntas em texto corrido, numeradas, num único turno.** A skill não para por falta de ferramenta nenhuma — não precisa de chave de API em passo nenhum.
+**Perguntar num único lote pelo meio interativo disponível**, saltando o que o contexto já responde.
 
 ```json
 [
@@ -61,7 +63,7 @@ Procurar no projeto: `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, p
 ]
 ```
 
-Se a resposta for "Sugere tu": propor 5 temas, cada um com pilar + ângulo numa linha, e usar AskUserQuestion para escolher um.
+Se a resposta for "Sugere tu": propor 5 temas, cada um com pilar + ângulo numa linha, e pedir ao utilizador para escolher um.
 
 > ⚠️ **Uma peça, um comportamento.** Se pedirem dois objetivos, escolher o mais barato da escada de atrito do módulo 04 e dizer porquê. Tentar todos não consegue nenhum.
 
@@ -87,7 +89,7 @@ Prova:            (o que sustenta o corpo)
 Buracos:          (o que falta confirmar com um humano)
 ```
 
-A estrutura sai da tabela do módulo 04 (problema→agitação→solução, atenção→interesse→desejo→ação, antes→depois→ponte, lista, situação→complicação→resolução, afirmação→prova→consequência). Escolher pelo caso de uso da tabela, não por hábito. Se a estrutura não for óbvia, oferecer três via AskUserQuestion, com o gancho de cada uma escrito por extenso na descrição — nunca texto de exemplo genérico.
+A estrutura sai da tabela do módulo 04 (problema→agitação→solução, atenção→interesse→desejo→ação, antes→depois→ponte, lista, situação→complicação→resolução, afirmação→prova→consequência). Escolher pelo caso de uso da tabela, não por hábito. Se a estrutura não for óbvia, oferecer três opções, com o gancho de cada uma escrito por extenso — nunca texto de exemplo genérico.
 
 ## Passo 3. Escrever camada a camada
 
@@ -124,7 +126,9 @@ Depois do bloco, e só depois:
 
 Máximo de três voltas. Se ao fim de três ainda não servir, o problema é do perfil e não do texto — dizê-lo e propor rever a secção 5.
 
-Ao "está bom": guardar em `Social Media/posts/AAAA-MM-DD-tema.md` e devolver ao perfil qualquer aprendizagem nova (secção 11).
+Ao "está bom": guardar apenas se houver destino canónico, meio de escrita e autorização. Caso
+contrário, entregar a versão final copiável. Devolver qualquer aprendizagem nova à fonte canónica
+de métricas e aprendizagem, sem inventar caminho.
 
 **Dizer o que se segue**, conforme o que a peça ainda precisa — sem o fazer sem pedirem:
 

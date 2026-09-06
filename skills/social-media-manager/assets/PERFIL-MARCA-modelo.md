@@ -1,6 +1,7 @@
 # Perfil de marca — redes sociais
 
-> Modelo. Copiar para o projeto (sugestão: `PERFIL-SOCIAL.md`, junto aos outros documentos de marca) e preencher.
+> Modelo opcional. Adaptar apenas quando o caso precisar de uma fonte documental estruturada; não é
+> pré-requisito para usar as skills e o nome do ficheiro é livre.
 >
 > **Regra de preenchimento:** o que não se sabe fica `POR DEFINIR`. Um campo por definir é uma pergunta em aberto e um risco assinalado; um campo preenchido por adivinhação é um erro que vai ser citado como facto durante meses.
 >

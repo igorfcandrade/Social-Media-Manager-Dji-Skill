@@ -1,6 +1,6 @@
 ---
 name: post-de-citacao
-description: "Cria um cartão de citação para Instagram, Facebook ou Pinterest — uma frase única em imagem, com a legenda que a sustenta, contraste verificado e texto alternativo. Serve três origens: uma frase da própria marca, uma frase real de cliente com autorização escrita, ou uma citação de autor com fonte verificada. Usa esta skill SEMPRE que o pedido for uma frase transformada em imagem (ex.: \"faz-me um post de citação\", \"quero um cartão com uma frase\", \"um post motivacional\", \"põe esta frase numa imagem\", \"um testemunho de cliente em imagem\", \"uma frase bonita para publicar\", \"cartão de citação\"). Também dispara quando alguém pede \"algo rápido para publicar hoje\" — e nesse caso a skill diz honestamente o que este formato rende e o que não rende."
+description: "Cria um cartão social com uma única frase em imagem, legenda de suporte, contraste verificado e texto alternativo. Usa apenas quando o pedido especifica uma citação, testemunho autorizado ou frase transformada em cartão; não presume este formato para pedidos vagos ou urgentes."
 ---
 
 # Post de citação
@@ -8,6 +8,10 @@ description: "Cria um cartão de citação para Instagram, Facebook ou Pinterest
 ## Gate de revisão
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
+
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
 
 Skill de execução. O julgamento — escrever para ser reenviado, prova social, acessibilidade — vive em `../social-media-manager/references/04-criacao-de-conteudo.md`. Ler o que for preciso, não repetir aqui.
 
@@ -26,17 +30,18 @@ Skill de execução. O julgamento — escrever para ser reenviado, prova social,
 
 Se a frase ou a legenda já vierem na mensagem, saltar a escrita de opções do Passo 2 e ir direto ao desenho. **Mas confirmar sempre a origem primeiro** (Passo 1): é a única pergunta que não se salta, porque é dela que dependem a autorização e a verificação. Não resumir a skill.
 
-## Passo 0. Perfil de marca
+## Passo 0. Contexto do caso
 
-Ler `PERFIL-SOCIAL.md` (ou `MARCA.md`, `MEMORY.md`). Interessam a secção 5 inteira — voz, tratamento, adjetivos do tom, palavras da casa, **palavras proibidas**, exemplos aprovados e rejeitados — mais a 6 (o que se pode afirmar) e a 4 (plataformas). Uma frase de sete palavras é o sítio onde a voz da marca está mais exposta: não há corpo de texto onde esconder um tom errado.
+Ler o contexto do caso disponível, qualquer que seja o nome ou formato. Interessam a secção 5 inteira — voz, tratamento, adjetivos do tom, palavras da casa, **palavras proibidas**, exemplos aprovados e rejeitados — mais a 6 (o que se pode afirmar) e a 4 (plataformas). Uma frase de sete palavras é o sítio onde a voz da marca está mais exposta: não há corpo de texto onde esconder um tom errado.
 
-Em conflito entre o perfil e o que esta skill diz, **manda o perfil** — ele conhece o negócio, esta skill não. Se o projeto tiver skill própria de voz, **essa ganha**. Sem perfil, criá-lo a partir de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` e **parar até existir**. Não criar ficheiros de voz nem de estilo em paralelo.
+Em conflito, ganha o contexto do caso. Sem voz ou identidade visual suficientes, pedir as decisões
+necessárias ou entregar apenas a estrutura com lacunas explícitas. Não criar ficheiros paralelos.
 
 ## Passo 1. Origem da frase — decide tudo o resto
 
 ⚠️ A origem pergunta-se **sempre**, mesmo quando a frase já vem colada na mensagem. Ter a frase escrita não diz de quem ela é — e é a origem, não a posse do texto, que abre ou fecha os passos de autorização e de verificação. Uma frase colada sem origem declarada é o caminho mais curto para publicar um depoimento de cliente sem autorização.
 
-**AskUserQuestion**:
+**Perguntar pelo meio interativo disponível:**
 
 ```json
 [

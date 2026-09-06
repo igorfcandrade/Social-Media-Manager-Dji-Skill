@@ -9,6 +9,10 @@ description: "Escreve o guião completo de um vídeo curto — Reel ou Short —
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução para vídeo curto. Reels usam normalmente vertical; Shorts podem ser quadrados ou verticais nas condições de PLAT-017. Confirmar o rácio na superfície. TikTok está `LOOK INTO` e não recebe regras atuais.
 
 O julgamento vive nos módulos: a anatomia da peça, as três camadas do gancho, a escada de chamadas à ação e a lista de acessibilidade estão em `../social-media-manager/references/04-criacao-de-conteudo.md` — **ler esse módulo antes de escrever**. O método de plataformas está em `../social-media-manager/references/05-plataformas.md`; para qualquer regra volátil citada abaixo, ler também o ID em `../social-media-manager/references/05-estado-das-plataformas.md`. O critério para entrar ou não numa tendência está em `../social-media-manager/references/09-tendencias-e-concorrencia.md`.
@@ -17,31 +21,23 @@ O julgamento vive nos módulos: a anatomia da peça, as três camadas do gancho,
 
 Se o tema ou o link já vierem na mensagem, usá-los e saltar diretamente para o passo que faltar. Não resumir a skill, não explicar o que é um gancho antes de o escrever, não pedir autorização para começar.
 
-## Passo 0. Perfil de marca
+## Passo 0. Contexto do caso
 
-Ler `PERFIL-SOCIAL.md` na raiz do projeto (ou o nome que o projeto usar: `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, uma pasta `Social Media/`, ou a memória do projeto). Interessam a secção 5 (voz), a 7 (pilares), a 6 (o que se pode afirmar), a 8 (quem aparece em câmara e meios de produção) e a 11 (aprendizagens — é onde o tempo médio de visualização real da conta fica registado, **se alguém o tiver lá escrito**; o modelo não tem campo próprio para ele. Não estando lá, o número tira-se das estatísticas da própria conta, não se estima).
-
-Se não existir, criá-lo a partir de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` e **parar até existir**, pelo menos nas secções 5, 6 e 8. Um guião escrito sem voz definida sai correto na forma e genérico em tudo o resto, e é o tipo de peça que não se publica.
-
-Em conflito entre esta skill e o perfil, **manda o perfil**.
+Localizar e ler voz, pilares, alegações, capacidade de produção, permissões de imagem e aprendizagens
+de vídeo. Não exigir um nome ou estrutura documental. Sem estes dados, pedir apenas os que forem
+necessários; se ainda assim se avançar, marcar as decisões não confirmadas. O tempo médio de
+visualização vem dos dados da própria conta, quando existir, e nunca se estima.
 
 ## Passo 1. Vídeo de referência — opcional, dois caminhos
 
 Um vídeo de referência é matéria-prima útil, não requisito. Se não houver, dizer numa linha que se avança sem referência e ir para o Passo 2.
 
-Existindo referência, verificar primeiro o ambiente:
-
-```
-! echo "APIFY:${APIFY_API_TOKEN:+definido}${APIFY_API_TOKEN:-em falta} · GEMINI:${GOOGLE_AI_API_KEY:+definido}${GOOGLE_AI_API_KEY:-em falta}"
-```
-
-**Nunca parar por falta de chave.** A ausência muda o caminho, não o resultado.
+Existindo referência, verificar que meios autorizados estão disponíveis. A ausência de integração
+muda o caminho, não o resultado.
 
 ### 1A. Caminho manual — o predefinido, funciona sem nada instalado
 
-Pedir ao utilizador que veja o vídeo de referência **duas vezes** (uma com som, outra em silêncio) e responder. Usar **AskUserQuestion** para o que é escolha, e pedir texto livre para o resto.
-
-**Sem `AskUserQuestion` disponível**, fazer exatamente as mesmas perguntas em texto corrido, numeradas, num turno só, com as opções listadas por letra. A ferramenta muda a apresentação, não o conteúdo — e esta skill não precisa de ferramenta nenhuma em passo nenhum.
+Pedir ao utilizador que veja o vídeo de referência **duas vezes** (uma com som, outra em silêncio) e responder. Pedir ao utilizador, pelo meio interativo disponível, o que é escolha, e pedir texto livre para o resto.
 
 ```json
 [
@@ -74,9 +70,10 @@ E a seguir, em texto livre, três coisas que valem mais do que qualquer análise
 2. **A duração total** e mais ou menos onde cada secção começa e acaba.
 3. **Em que segundo é que perdeste o interesse na segunda visualização** — é o dado mais honesto que existe e nenhuma API o fornece.
 
-### 1B. Caminho automático — só se as chaves existirem
+### 1B. Caminho assistido — só com meios disponíveis e autorizados
 
-Com `APIFY_API_TOKEN` e `GOOGLE_AI_API_KEY` definidas, é possível descarregar o vídeo e obter transcrição com marcas de tempo, contagem de planos e estrutura, poupando ao utilizador o trabalho manual. Perguntar antes de o fazer — descarregar um ficheiro exige autorização explícita.
+Se o ambiente permitir analisar a referência, é possível obter transcrição com marcas de tempo,
+contagem de planos e estrutura. Confirmar autorização antes de descarregar ou processar um ficheiro.
 
 Se qualquer passo automático falhar (actor sem resultados, vídeo privado, quota), **não fabricar análise**: dizer o que falhou numa linha e cair para 1A.
 
@@ -90,7 +87,7 @@ Nunca inventar números do vídeo de referência. O que não foi observado não 
 
 ## Passo 2. Tema, comportamento e duração
 
-Se não vier na mensagem, **AskUserQuestion**:
+Se não vier na mensagem, **Perguntar pelo meio interativo disponível:**
 
 ```json
 [
@@ -201,7 +198,7 @@ Terminar com **duas linhas**: o que foi tirado da referência e o que é origina
 - **Português europeu** em tudo — incluindo o texto no ecrã e a legenda.
 - ⚠️ **Identificar conteúdo comercial.** ⬤ `#PUB` no início quando há dinheiro ou benefício de terceiro — é o que a lei exige. ◐ **"conteúdo promocional"** quando é a própria marca a promover produto, preço, campanha ou desconto — é política interna deste sistema, não redação imposta. **Não trocar as duas:** carimbar `#PUB` numa peça da própria marca afirma uma relação comercial que não existe e dilui a etiqueta onde ela é obrigatória. Se a peça não promove nada, não leva nada. Tabela dos três casos em `../social-media-manager/references/10-risco-crise-e-conformidade.md`.
 - **Vídeo curto, com rácio confirmado.** Não impor 9:16 a Shorts quadrados; TikTok fica `LOOK INTO`.
-- **Nunca parar por falta de APIFY_API_TOKEN ou GOOGLE_AI_API_KEY.** São aceleradores, não requisitos.
+- **Nunca parar por falta de integração.** É um acelerador, não um requisito.
 - **Nunca inventar métricas, transcrições ou estrutura do vídeo de referência.** Se a análise falhou, dizer que falhou.
 - **Nunca inventar números, resultados, prazos, preços ou casos de cliente** para o guião. Vêm do perfil.
 - Um gancho que o corpo não cumpre não se entrega — destrói o tempo de visualização, que é o sinal que mais pesa.

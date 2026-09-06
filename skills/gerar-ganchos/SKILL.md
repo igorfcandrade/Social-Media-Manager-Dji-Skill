@@ -9,6 +9,10 @@ description: "Gera 8 variações de gancho para Instagram, Reels, Facebook ou Sh
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. A biblioteca de técnicas, as três camadas e os três critérios de teste vivem em `../social-media-manager/references/04-criacao-de-conteudo.md`. **Ler esse módulo e usar as técnicas que lá estão.** Para o que cada plataforma declara premiar nos primeiros segundos, `../social-media-manager/references/05-plataformas.md`.
 
 ## O conflito com a prática do isco, resolvido
@@ -29,17 +33,18 @@ Se o tema já vier na mensagem, usá-lo e saltar para o Passo 2 — mas **o form
 
 ## Passo 1. Tema e o que é verdade
 
-Ler o perfil de marca do projeto (`PERFIL-SOCIAL.md`, `MARCA.md`, `CLAUDE.md`, `MEMORY.md`, uma pasta `Social Media/`, ou a memória do projeto):
+Ler o perfil de marca do projeto (o contexto do caso disponível na mensagem, anexos, fontes ligadas ou documentos do projeto):
 
 - **secção 5, Voz** — tratamento, palavras da casa, palavras proibidas, emojis;
 - **secção 6, O que se pode e não se pode afirmar** — alegações permitidas com a prova que as sustenta, alegações proibidas, restrições regulatórias do setor. **É a secção que decide se um gancho é publicável**, e a que mais se salta;
 - **secção 7, Pilares** — âmbito e contra-âmbito.
 
-Se o perfil não existir, avançar, dizer numa linha que os ganchos saem corretos na forma e genéricos na voz, e **propor criá-lo a partir de `../social-media-manager/assets/PERFIL-MARCA-modelo.md`**. Não inventar factos da marca para tapar a falta.
+Sem voz disponível, avançar apenas se a pessoa aceitar uma versão genérica e dizê-lo numa linha.
+Não criar contexto automaticamente nem inventar factos para tapar a falta.
 
 **Em conflito entre o perfil e esta skill, manda o perfil.**
 
-Se faltar o tema, **AskUserQuestion**. Sem essa ferramenta, fazer as mesmas três perguntas em texto corrido, numeradas, num turno só — a skill não precisa de ferramenta nenhuma para chegar ao fim.
+Se faltar o tema, pedir as três escolhas num único lote pelo meio interativo disponível.
 
 ```json
 [
