@@ -9,27 +9,32 @@ description: "Pega num tema já decidido e formata-o numa estrutura de copy nome
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. A tabela de estruturas, a anatomia em cinco camadas, a escada de atrito das chamadas à ação e a lista de acessibilidade vivem em `../social-media-manager/references/04-criacao-de-conteudo.md`. **Ler esse módulo e usar a tabela que lá está — não inventar outra nomenclatura.** Para os cortes e limites de cada plataforma, `../social-media-manager/references/05-plataformas.md`; se a decisão usar um ID PLAT, ler o registo em `../social-media-manager/references/05-estado-das-plataformas.md`.
 
 ## Arranque imediato
 
 Ao disparar, ir direto ao Passo 0. Não resumir a skill, não explicar as estruturas antes de as aplicar.
 
-## Passo 0. Perfil de marca
+## Passo 0. Contexto do caso
 
-Ler `PERFIL-SOCIAL.md` (ou `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/`). As secções que mandam aqui:
+Ler o contexto do caso disponível, qualquer que seja o nome ou formato. As secções que mandam aqui:
 
 - **5, Voz** — tratamento, palavras da casa, palavras proibidas, emojis, grafias fixas. É daqui que sai o ritmo e a pontuação.
 - **6, O que se pode e não se pode afirmar** — alegações permitidas com a prova, alegações proibidas, restrições regulatórias. Decide se a matéria-prima é publicável tal como está.
 - **3, Público** — para saber que palavras a pessoa do outro lado usa.
 
-**Em conflito, manda o perfil.** Se o projeto tiver skill própria de voz, essa ganha sobre a secção 5.
+**Em conflito, manda o perfil.** Se existir uma fonte canónica de voz, ela ganha sobre a secção 5.
 
-Se não existir, copiá-lo de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` e dizer numa linha que a formatação vai sair correta mas a voz vai sair genérica. Aqui **não** é bloqueante: esta skill trabalha texto que já existe. Mas dizê-lo.
+Sem contexto de voz, dizer numa linha que a estrutura pode ser corrigida, mas a voz ficará genérica.
+Não criar uma fonte de contexto automaticamente.
 
 ## Passo 1. Recolher
 
-**AskUserQuestion**, um lote só. **Se `AskUserQuestion` não existir neste ambiente, fazer as mesmas perguntas em texto corrido, numeradas, num único turno.** Esta skill não precisa de chave de API nem de ferramenta externa em passo nenhum.
+**Perguntar num único lote pelo meio interativo disponível.**
 
 ```json
 [

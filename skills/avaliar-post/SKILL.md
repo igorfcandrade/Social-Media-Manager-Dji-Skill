@@ -9,20 +9,26 @@ description: "Avalia um rascunho de post, legenda ou guião de Reel/Short antes 
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. O critério vive nos módulos: anatomia da peça, ganchos, extensão e acessibilidade em `../social-media-manager/references/04-criacao-de-conteudo.md`; leitura de dados, regressão à média e regra dos três em `../social-media-manager/references/07-analise-e-relatorio.md`; benchmarks com amostra em `../social-media-manager/references/11-numeros-de-referencia.md`. **Ler o que for preciso e não o repetir aqui.**
 
 ## Arranque imediato
 
 Ao disparar, ir direto ao Passo 0. Não resumir a skill, não explicar o método de pontuação, não perguntar se se avança.
 
-## Passo 0. Perfil de marca — bloqueante
+## Passo 0. Contexto do caso
 
-Procurar no projeto: `PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/`.
+Procurar no projeto: o contexto do caso disponível na mensagem, anexos, fontes ligadas ou documentos do projeto.
 
 - **Se existir**, lê-lo primeiro. Interessam as secções 3 (Público), 5 (Voz), 6 (Alegações), 7 (Pilares), 11 (Aprendizagens) e 12 (fórmula de taxa escolhida). Dizer numa linha o que foi aproveitado.
-- **Se não existir**, copiá-lo de `../social-media-manager/assets/PERFIL-MARCA-modelo.md` para `PERFIL-SOCIAL.md` e **parar até estarem preenchidas as secções 5 e 7**. Sem voz definida, a pontuação de voz é adivinhação com ar de rigor.
+- **Se não existir**, avaliar apenas os critérios observáveis e marcar voz, pilares e adequação à
+  marca como não avaliáveis. Pedir esses dados se forem indispensáveis; não criar contexto
+  automaticamente.
   - **Exceção declarada:** se a pessoa não quiser preencher o perfil agora, avaliar na mesma os outros quatro critérios e escrever `Voz — · sem perfil de voz definido` em vez de uma nota. Nunca pontuar voz por adivinhação, e nunca inferir a voz do próprio rascunho — isso é dar nota ao texto contra ele mesmo.
-- **Em conflito entre esta skill e o perfil, manda o perfil.** Se o projeto tiver skill própria de voz, essa ganha.
+- **Em conflito entre esta skill e o perfil, manda o perfil.** Se existir uma fonte canónica de voz, ela ganha.
 
 ## Passo 1. Obter o rascunho
 
@@ -34,7 +40,7 @@ Esperar. Não avaliar um texto imaginado.
 
 ## Passo 2. Escolher a fonte de dados
 
-**Dependências externas são opcionais.** Nada aqui exige API, chave ou ferramenta instalada, em passo nenhum. Se **AskUserQuestion** não estiver disponível, fazer as mesmas duas perguntas em texto corrido, numeradas, num turno só — o resto da skill corre igual.
+**Dependências externas são opcionais.** Nada aqui exige API, chave ou ferramenta instalada, em passo nenhum.
 
 ```json
 [

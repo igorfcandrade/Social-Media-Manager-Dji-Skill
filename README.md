@@ -1,10 +1,11 @@
 # Social Media Skills (PT-PT)
 
-Conjunto de **19 skills** de gestão de redes sociais em português de Portugal, para
-Claude Code, Codex e qualquer assistente que descubra skills em disco.
+Conjunto de **19 skills** de gestão de redes sociais em português de Portugal, portáteis entre
+ambientes que consigam carregar skills em Markdown.
 
-Uma skill **governa** e dezoito **executam**. O ofício vive nas skills; os factos da
-tua marca vivem nos ficheiros do teu projeto. As duas camadas nunca se misturam.
+Uma skill **governa** e dezoito **executam**. O ofício vive nas skills; os factos do caso chegam
+pela mensagem, anexos, fontes ligadas ou documentos do projeto. O ambiente fornece os meios de
+interação e execução. As três camadas nunca se misturam.
 
 ## O que faz
 
@@ -17,7 +18,7 @@ tua marca vivem nos ficheiros do teu projeto. As duas camadas nunca se misturam.
 | **Visual** | `design-grafico` · `carrossel` · `infografico` · `post-de-citacao` |
 | **Perfis e dados** | `otimizar-perfil` · `painel-metricas` · `avaliar-post` |
 
-Serve qualquer setor — restauração, artesanato, SaaS, clínica, loja local, serviços.
+Serve qualquer organização sem pressupor setor, dimensão, equipa, website ou percurso de conversão.
 
 ## O que NÃO faz — lê isto antes de instalar
 
@@ -31,34 +32,18 @@ Serve qualquer setor — restauração, artesanato, SaaS, clínica, loja local, 
 - **Não inventa factos da tua marca.** Preços, prazos, produtos e promessas vêm dos
   teus ficheiros. Se não existirem, a skill pergunta — não estima.
 
-## Antes de usar: o ficheiro obrigatório
+## Contexto do caso
 
-**A skill não funciona sem contexto de marca.** É a única peça que tens mesmo de criar.
+A skill usa apenas o contexto necessário para o pedido atual. Esse contexto pode estar na própria
+mensagem, em anexos, em fontes ligadas ou nos documentos que o projeto já utiliza. Não exige um
+ficheiro, nome ou estrutura específicos.
 
-Escolhe conforme o tamanho do projeto:
+Quando um projeto quer criar uma estrutura documental, pode usar opcionalmente
+`skills/social-media-manager/assets/PERFIL-MARCA-modelo.md` ou o pacote modular de
+`sistema-contexto-conteudo`. São modelos, não pré-requisitos.
 
-### Projeto simples — um ficheiro
-
-Copia `skills/social-media-manager/assets/PERFIL-MARCA-modelo.md` para a raiz do teu
-projeto com o nome **`PERFIL-SOCIAL.md`** e preenche-o. O que não souberes fica
-`POR DEFINIR` — nunca preenchas por adivinhação.
-
-As secções que mais falta fazem:
-
-| Secção | Porquê |
-|---|---|
-| **1. Identidade** | Quem é a marca, e **quem é o responsável humano** que aprova |
-| **3. Público** | Sem isto, o conteúdo sai genérico |
-| **4. Canais** | Onde se publica. Um destino fora desta lista **não se produz** |
-| **5. Voz** | Como a marca soa. A skill `construir-voz` preenche-a a partir de textos teus |
-| **6. Oferta e limites** | O que se pode e não se pode afirmar |
-
-### Projeto com várias fontes ou campanhas
-
-Usa o pacote em `skills/sistema-contexto-conteudo/assets/pacote-contexto/`, que
-começa por um `CONTEXTO-MANIFESTO.md` a declarar caminhos canónicos e precedência.
-
-Corre a skill `sistema-contexto-conteudo` para te guiar na criação.
+Se faltar um facto indispensável, a skill pergunta. Se a ausência não bloquear o trabalho, marca
+`POR CONFIRMAR`. Nunca presume website, checkout, equipa, preços, prazos ou ferramentas.
 
 ## Instalação
 

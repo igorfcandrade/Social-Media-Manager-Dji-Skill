@@ -9,6 +9,10 @@ description: "Desenha a capa e o primeiro fotograma de um vídeo curto — Reel 
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução para vídeo curto, no rácio do vídeo. Reels usam normalmente 9:16; Shorts podem ser quadrados ou verticais (PLAT-017). Não faz miniaturas de YouTube longo e não usa regras atuais de TikTok, que está `LOOK INTO`.
 
 O julgamento — o que é um gancho, o que as plataformas premeiam, a lista de acessibilidade — vive em `../social-media-manager/references/04-criacao-de-conteudo.md` e `../social-media-manager/references/05-plataformas.md`. Se a decisão usar um ID PLAT, ler o registo em `../social-media-manager/references/05-estado-das-plataformas.md`. Ler o que for preciso, não repetir aqui.
@@ -28,17 +32,20 @@ O primeiro fotograma joga contra o polegar em movimento e tem 3 camadas simultâ
 
 Se o vídeo ou o guião já vierem na mensagem, usá-los e saltar para o Passo 2. Não resumir a skill.
 
-## Passo 0. Perfil de marca
+## Passo 0. Contexto do caso
 
-Ler `PERFIL-SOCIAL.md` (ou `MARCA.md`, `MEMORY.md`). Interessam a secção 5 (voz, grafias fixas, palavras proibidas), a 4 (plataformas), a 6 (o que se pode afirmar) e a 8 (quem aparece em câmara, meios de produção). Se o projeto tiver skill própria de tema visual ou paleta, **essa ganha** sobre qualquer sugestão de cor daqui.
+Ler o contexto do caso disponível, qualquer que seja o nome ou formato. Interessam a secção 5 (voz, grafias fixas, palavras proibidas), a 4 (plataformas), a 6 (o que se pode afirmar) e a 8 (quem aparece em câmara, meios de produção). Se existir uma fonte canónica de identidade visual, **ela ganha** sobre qualquer sugestão de cor daqui.
 
-Se não existir perfil, criá-lo a partir de `../social-media-manager/assets/PERFIL-MARCA-modelo.md`. Não é preciso o perfil inteiro para fazer uma capa: **parar até estarem preenchidas as secções 4, 5, 6 e 8**; o resto pode ficar `POR DEFINIR`.
+Sem destino, voz, alegações e capacidade de produção suficientes, pedir apenas esses dados ou
+entregar uma estrutura com lacunas explícitas. Não criar contexto automaticamente.
 
-⚠️ **A paleta e a tipografia não existem como campos no modelo de perfil.** Se o projeto não tiver skill de tema visual e não as tiver registado, **perguntar e escrever a resposta na secção 12 (Convenções técnicas)** antes de propor um único hex. Cores, tipografia e nomes de produto não se adivinham: uma capa com a cor errada repetida vinte vezes é uma grelha inteira a corrigir.
+Se a paleta e a tipografia não estiverem no contexto, perguntar antes de propor um único hex. Com
+autorização, devolver a decisão à fonte canónica de identidade visual; sem escrita disponível,
+entregar o bloco copiável. Cores, tipografia e nomes de produto não se adivinham.
 
 ## Passo 1. Contexto do vídeo
 
-**AskUserQuestion**, saltando o que já for conhecido:
+**Perguntar pelo meio interativo disponível**, saltando o que já for conhecido:
 
 ```json
 [
@@ -196,7 +203,7 @@ VERIFICAR NA APP ANTES DE PUBLICAR
 - Nenhuma ferramenta de geração de imagem é obrigatória. O caminho manual — fotograma real captado de propósito — é o predefinido e é o melhor.
 - Imagem gerada por IA que seja realista: rotulada, e nunca a representar produto, resultado ou pessoa que não correspondam ao real.
 - Texto alternativo em todas as capas, legendas do vídeo revistas à mão, e a informação essencial da capa repetida na legenda visível. As três vêm do módulo 04 e nenhuma é opcional.
-- **Nenhuma cor se inventa.** Sem paleta no perfil nem skill de tema visual, pergunta-se — não se propõe um hex plausível.
+- **Nenhuma cor se inventa.** Sem paleta no perfil nem fonte canónica de identidade visual, pergunta-se — não se propõe um hex plausível.
 - As dimensões de recorte das grelhas mudam: **verificar na aplicação, não citar de memória nem de blogues.**
 - Recomendar sempre a mesma família visual de capas ao longo do tempo. A coerência da grelha rende mais do que qualquer capa isolada.
 - Não resumir esta skill. Executá-la.

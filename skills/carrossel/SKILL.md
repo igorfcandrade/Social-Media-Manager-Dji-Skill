@@ -1,6 +1,6 @@
 ---
 name: carrossel
-description: "Constrói um carrossel de vários slides para Instagram ou Facebook — capa, corpo, fecho — a partir de conteúdo existente, com resumo aprovado antes de produzir, contraste verificado e texto alternativo por slide. Usa esta skill SEMPRE que o trabalho for conteúdo de vários cartões (ex.: \"faz-me um carrossel\", \"transforma este artigo em carrossel\", \"quero vários slides sobre isto\", \"um post com várias imagens\", \"explica isto em cartões\", \"isto dá um carrossel?\", \"tenho um guia para publicar\", \"quero um post que as pessoas guardem\"). O carrossel é o formato dos guardados: dispara sempre que o objetivo for referência, profundidade ou algo a que alguém volte, mesmo que a palavra \"carrossel\" não apareça."
+description: "Constrói um carrossel social de vários cartões — capa, sequência e fecho — com contraste verificado e texto alternativo por cartão. Usa quando a pessoa pede explicitamente vários cartões, slides ou um carrossel, ou quando conteúdo já fornecido não cabe legitimamente numa só imagem. Não ativa apenas porque o objetivo é gerar guardados."
 ---
 
 # Carrossel
@@ -8,6 +8,10 @@ description: "Constrói um carrossel de vários slides para Instagram ou Faceboo
 ## Gate de revisão
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
+
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
 
 Skill de execução. O julgamento — formato por função, escrita para ser guardado, acessibilidade — vive em `../social-media-manager/references/04-criacao-de-conteudo.md`. Ler o que for preciso, não repetir aqui.
 
@@ -24,13 +28,14 @@ Skill de execução. O julgamento — formato por função, escrita para ser gua
 
 Se o conteúdo já vier na mensagem, usá-lo e saltar para o Passo 2. Não resumir a skill.
 
-## Passo 0. Perfil de marca
+## Passo 0. Contexto do caso
 
-Ler `PERFIL-SOCIAL.md` (ou `MARCA.md`, `CLAUDE.md`, `MEMORY.md`, uma pasta `Social Media/`). Interessam a secção 5 (voz, grafias fixas, palavras proibidas), a 4 (plataformas), a 6 (o que se pode afirmar) e a 7 (pilares — o carrossel tem de caber num).
+Ler o contexto do caso disponível, qualquer que seja o nome ou formato. Interessam a secção 5 (voz, grafias fixas, palavras proibidas), a 4 (plataformas), a 6 (o que se pode afirmar) e a 7 (pilares — o carrossel tem de caber num).
 
-**Em conflito entre o perfil e esta skill, manda o perfil.** Se o projeto tiver skill própria de tema visual ou de voz, **essa ganha** sobre qualquer cor ou regra daqui.
+**Em conflito entre o perfil e esta skill, manda o perfil.** Fontes canónicas de identidade visual ou voz **ganham** sobre qualquer cor ou regra daqui.
 
-Sem perfil, criá-lo a partir de `../social-media-manager/assets/PERFIL-MARCA-modelo.md`, em conversa com quem sabe, e **parar até existir**. Os campos por responder ficam `POR DEFINIR` — nunca preenchidos por adivinhação, e nada que dependa deles se afirma no carrossel.
+Sem contexto suficiente, pedir apenas o que for indispensável ou entregar a estrutura com
+`POR CONFIRMAR`. Não criar contexto automaticamente nem afirmar o que depende de dados em falta.
 
 ## Passo 1. Conteúdo e parâmetros
 
@@ -38,7 +43,7 @@ Se não houver conteúdo:
 
 > Cola o conteúdo do carrossel. Um post, uma secção de newsletter, um método, notas ou pontos soltos servem todos.
 
-Depois, **AskUserQuestion**:
+Depois, **Perguntar pelo meio interativo disponível:**
 
 ```json
 [

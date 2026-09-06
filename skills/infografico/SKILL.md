@@ -9,6 +9,10 @@ description: "Transforma conteúdo denso — um post, uma secção de newsletter
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. Uma infografia é **uma imagem única, vertical, que condensa uma estrutura**. Não é um carrossel espalmado nem um post ilustrado.
 
 O julgamento — formato por função, o que se guarda, a lista de acessibilidade — vive em `../social-media-manager/references/04-criacao-de-conteudo.md`. Ler o que for preciso, não repetir aqui.
@@ -17,13 +21,14 @@ O julgamento — formato por função, o que se guarda, a lista de acessibilidad
 
 Se o conteúdo já vier na mensagem, usá-lo e saltar o Passo 1. **O Passo 0 nunca se salta** — sem perfil não se produz nada. Não resumir a skill.
 
-## Passo 0. Perfil de marca
+## Passo 0. Contexto do caso
 
-Ler `PERFIL-SOCIAL.md` (ou `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, ou uma pasta `Social Media/`). Interessam a secção 5 (voz, grafias fixas, palavras proibidas), a 4 (plataformas), a 6 (o que se pode afirmar) e a 12 (convenções).
+Ler o contexto do caso disponível, qualquer que seja o nome ou formato. Interessam a secção 5 (voz, grafias fixas, palavras proibidas), a 4 (plataformas), a 6 (o que se pode afirmar) e a 12 (convenções).
 
-**Em conflito entre o perfil e esta skill, manda o perfil** — ele conhece o negócio, esta skill não. E se o projeto tiver skill própria de tema visual, **essa ganha** sobre qualquer cor sugerida aqui.
+**Em conflito entre o perfil e esta skill, manda o perfil** — ele conhece o negócio, esta skill não. E se existir uma fonte canónica de identidade visual, **ela ganha** sobre qualquer cor sugerida aqui.
 
-Sem perfil, criá-lo a partir de `../social-media-manager/assets/PERFIL-MARCA-modelo.md`, **em conversa com quem sabe** e sem adivinhar: os campos por responder ficam marcados `POR DEFINIR`. **Parar até existir.**
+Sem identidade visual ou voz disponíveis, pedir apenas as decisões necessárias ou entregar a
+estrutura com `POR CONFIRMAR`. Não criar uma fonte de contexto automaticamente.
 
 ## Passo 1. Obter o conteúdo
 
@@ -47,7 +52,7 @@ Contar os pontos-chave. Este teste decide o formato e evita o erro mais caro des
 
 O estilo decide-se **antes** de escrever o resumo, porque o resumo já nomeia cores.
 
-**AskUserQuestion**:
+**Perguntar pelo meio interativo disponível:**
 
 ```json
 [

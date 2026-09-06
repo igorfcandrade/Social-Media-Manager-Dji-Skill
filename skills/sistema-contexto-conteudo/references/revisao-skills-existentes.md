@@ -18,7 +18,7 @@ Uma skill pode aplicar corretamente o seu método e, ainda assim, produzir uma r
 
 ## Migração recomendada
 
-1. Substituir referências genéricas a `MEMORY.md` por caminhos declarados em `CONTEXTO-MANIFESTO.md`.
+1. Substituir referências a agregadores genéricos por fontes canónicas identificadas pelo domínio.
 2. Mover prazos, portes, pagamento, checkout e capacidade para `OPERACOES.md` e `CONTEXTO-ATUAL.md`.
 3. Mover estado, papel, público observado, formatos e cadência por canal para `PERFIL-SOCIAL.md`.
 4. Mover resultados e conclusões de desempenho para `METRICAS-E-APRENDIZAGENS.md`, com período e confiança.

@@ -1,6 +1,6 @@
 ---
 name: voz-newsletter
-description: "Constrói as instruções de escrita da newsletter de uma marca — abertura, estrutura de secções, uso de dados, formatação, fecho e comprimento — a partir de edições antigas ou, na falta delas, de um de seis arquétipos afinado à voz da marca. Escreve o resultado no perfil de marca do projeto. Usa esta skill SEMPRE que aparecer trabalho de newsletter ou email periódico, mesmo sem essas palavras (ex.: \"constrói a voz da newsletter\", \"como devo escrever a newsletter?\", \"vamos lançar um email mensal\", \"analisa as edições que já mandei\", \"que estrutura deve ter a newsletter?\", \"treina no meu email\", \"a newsletter está sempre diferente de edição para edição\"). Dispara também quando alguém colar edições antigas a pedir análise. Requer a voz base já definida no perfil."
+description: "Constrói regras de escrita para uma newsletter a partir de edições antigas ou de um arquétipo afinado à voz base. Usa quando pedirem voz, estrutura ou consistência editorial da newsletter. Não trata captação, plataforma de envio ou automatização. Atualiza contexto apenas com autorização."
 ---
 
 # Voz da newsletter
@@ -8,6 +8,10 @@ description: "Constrói as instruções de escrita da newsletter de uma marca �
 ## Gate de revisão
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
+
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
 
 Skill de execução, assente na voz base. O critério sobre voz vive em `../social-media-manager/references/02-voz-e-mensagem.md`; sobre planeamento e reaproveitamento, em `../social-media-manager/references/03-planeamento-e-calendario.md` e `04-criacao-de-conteudo.md`; sobre conformidade, em `10-risco-crise-e-conformidade.md`. Não repetir esse conteúdo aqui.
 
@@ -17,7 +21,7 @@ Skill de execução, assente na voz base. O critério sobre voz vive em `../soci
 
 ## Pré-requisito: o perfil de marca
 
-Ao disparar, procurar o perfil do projeto (`PERFIL-SOCIAL.md`, `MARCA.md`, `MEMORY.md`, `CLAUDE.md`, pasta `Social Media/` ou equivalente). **Guardar o caminho do ficheiro encontrado — é nele que se escreve no Passo 3, e não num nome fixo.** Verificar se as secções **3 (Público)** e **5 (Voz)** estão preenchidas.
+Ao disparar, procurar o perfil do projeto (o contexto do caso disponível na mensagem, anexos, fontes ligadas ou documentos do projeto ou equivalente). **Guardar o caminho do ficheiro encontrado — é nele que se escreve no Passo 3, e não num nome fixo.** Verificar se as secções **3 (Público)** e **5 (Voz)** estão preenchidas.
 
 **Se não existirem ou estiverem `POR DEFINIR`:**
 
@@ -62,7 +66,7 @@ Seguir para o Passo 3.
 
 ## Passo 2b. Escolha de arquétipo
 
-Chamar **AskUserQuestion** com uma pergunta. **Se `AskUserQuestion` não existir neste ambiente, fazer exatamente a mesma pergunta em texto corrido, com as seis opções por letra e a descrição de cada uma por extenso, num único turno.** A ferramenta muda a apresentação, não o conteúdo.
+Apresentar as seis opções por extenso, numa única pergunta, pelo meio interativo disponível.
 
 ```json
 [
@@ -80,11 +84,14 @@ Chamar **AskUserQuestion** com uma pergunta. **Se `AskUserQuestion` não existir
 
 Carregar os valores por defeito de `references/arquetipos.md` **desta pasta**. Afinar **todos** os campos com a voz e o público do perfil antes de escrever seja o que for — o arquétipo é o esqueleto, o perfil é quem manda; em conflito entre os dois, **manda o perfil**. Marcar no resultado que se usaram valores por defeito e que se revê ao fim de ◐ 5 edições publicadas (limiar de prática desta skill, não medição — a revisão faz-se quando houver material real para analisar).
 
-## Passo 3. Escrever no perfil
+## Passo 3. Devolver ao contexto
 
-**Não criar `newsletter-voice.md` nem nenhum ficheiro de voz paralelo.** A newsletter é um canal da marca; as suas regras vivem no perfil.
+Não criar uma fonte de voz paralela. A newsletter é um canal da marca; as suas regras vivem na
+fonte canónica de voz. Só a alterar com autorização; sem meio de escrita, entregar o bloco copiável.
 
-Acrescentar **ao ficheiro de perfil localizado no pré-requisito** (`PERFIL-SOCIAL.md` ou o equivalente do projeto) uma subsecção **`## 5b. Voz da newsletter`**, logo a seguir à secção 5, com esta estrutura e no máximo ◐ 1.200 palavras — limite de legibilidade escolhido por esta skill, não um número medido.
+Acrescentar à fonte canónica uma secção de voz da newsletter, adjacente às regras de voz base quando
+o formato o permitir, com esta estrutura e no máximo ◐ 1.200 palavras — limite de legibilidade
+escolhido por esta skill, não um número medido.
 
 **Se já existir uma `5b`:** lê-la primeiro, mostrar em que pontos a nova análise diverge da anterior, e **pedir confirmação antes de substituir**. Não acrescentar uma segunda `5b` nem reescrever por cima em silêncio.
 
@@ -156,8 +163,9 @@ Uma newsletter é comunicação comercial por email, e isso tem regras que um po
 - Exigir o perfil com as secções 3 e 5 preenchidas. Se faltarem, redirecionar para `construir-voz` e parar.
 - Mínimo de 2 edições no modo análise. Abaixo disso, oferecer o modo arquétipo.
 - Máximo de ◐ 1.200 palavras na subsecção. Apertado bate exaustivo.
-- Nenhuma ferramenta é obrigatória. Sem `AskUserQuestion`, a escolha de arquétipo faz-se em conversa e a skill chega ao fim na mesma.
-- Escrever no ficheiro de perfil que existe no projeto, seja qual for o nome. Não criar um `PERFIL-SOCIAL.md` novo ao lado de um perfil que já existe com outro nome.
+- Nenhuma ferramenta é obrigatória. A escolha adapta-se ao meio interativo disponível e chega ao fim sem ferramenta especial.
+- Atualizar a fonte canónica que existe, com autorização. Sem escrita disponível, entregar o bloco
+  completo; não criar uma segunda fonte.
 - Os campos `Acessibilidade` e `Rodapé e conformidade` da subsecção 5b são fixos e não se omitem, haja ou não padrão nas edições analisadas.
 - Não inventar sinais de voz, frases de assinatura, URL ou nomes que não apareçam em 2 ou mais edições.
 - Não duplicar a secção 5 do perfil. Esta subsecção acrescenta só o que é específico da newsletter.

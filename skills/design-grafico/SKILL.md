@@ -1,6 +1,6 @@
 ---
 name: design-grafico
-description: "Desenha a peça visual que acompanha um post — decide entre um gráfico construído em HTML/CSS (estrutura, passos, comparação, números) e uma imagem gerada ou fotografada, e entrega a peça pronta com paleta, contraste verificado e texto alternativo. Usa esta skill SEMPRE que o pedido for uma imagem para acompanhar conteúdo (ex.: \"faz-me um gráfico para este post\", \"preciso de uma imagem para isto\", \"cria um visual\", \"que imagem ponho aqui?\", \"desenha-me isto\", \"transforma este texto em imagem\", \"quero uma peça para o Instagram\", \"acabei o post, falta a arte\", \"monta-me um cartão com estes três passos\"). Dispara também logo a seguir a escrever um post, quando falta o visual. Para carrossel de vários slides usar `carrossel`; para infografia densa usar `infografico`; para citações usar `post-de-citacao`; para capa de vídeo usar `capa-de-video`."
+description: "Desenha uma peça visual social única a partir de conteúdo aprovado, com paleta, contraste e texto alternativo. Usa quando pedirem explicitamente um visual ou imagem para uma publicação. Carrosséis, infografias, citações e capas de vídeo têm executores próprios; não ativa automaticamente depois de escrever texto."
 ---
 
 # Design gráfico de peça social
@@ -9,17 +9,22 @@ description: "Desenha a peça visual que acompanha um post — decide entre um g
 
 Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
 
+## Contrato de contexto
+
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+
 Skill de execução. O julgamento — que formato serve que objetivo, o sistema visual de cinco decisões, a lista de acessibilidade — vive em `../social-media-manager/references/04-criacao-de-conteudo.md`. Ler o que for preciso, não repetir aqui.
 
 ## Arranque imediato
 
 Se o post já vier na mensagem, usá-lo e saltar a procura de ficheiro no Passo 1 — mas **a pergunta do destino faz-se sempre**, porque é dela que sai a dimensão. Não resumir a skill nem explicar as opções antes de começar.
 
-## Passo 0. Perfil de marca
+## Passo 0. Contexto do caso
 
-Ler `PERFIL-SOCIAL.md` (ou `MARCA.md`, `MEMORY.md`) na raiz do projeto. Interessam a secção 4 (plataformas), a 5 (voz, grafias fixas, palavras proibidas), a 6 (o que se pode afirmar) e a 8 (meios de produção). Se o projeto tiver skill própria de tema visual ou paleta, **essa ganha** sobre qualquer sugestão de cor daqui.
+Ler o contexto do caso disponível, qualquer que seja o nome ou formato na raiz do projeto. Interessam a secção 4 (plataformas), a 5 (voz, grafias fixas, palavras proibidas), a 6 (o que se pode afirmar) e a 8 (meios de produção). Se existir uma fonte canónica de identidade visual, **ela ganha** sobre qualquer sugestão de cor daqui.
 
-Se não existir perfil, criá-lo a partir de `../social-media-manager/assets/PERFIL-MARCA-modelo.md`, e **não produzir peça nenhuma até a identidade visual estar escrita**. Cores e tipografia não se adivinham: uma peça com a cor errada é uma peça a refazer, e vinte peças com a cor errada são uma identidade a refazer.
+Sem identidade visual disponível, pedir as decisões necessárias ou entregar apenas uma proposta
+estrutural. Não criar ficheiros nem escolher cores e tipografia por suposição.
 
 ⚠️ **O modelo de perfil não tem campo de paleta nem de tipografia.** Se as cinco decisões visuais não estiverem lá, perguntar ao utilizador — códigos hexadecimais, tipo de letra, família de fundos — e **escrever a resposta no próprio perfil**, na secção 12 (Convenções técnicas), como uma entrada "Convenções visuais". Nunca criar um ficheiro paralelo de tema, paleta ou estilo: o perfil é o único sítio. O que ficar por responder fica marcado `POR DEFINIR` e é uma pergunta em aberto, não uma lacuna a tapar com um azul qualquer.
 
@@ -29,7 +34,7 @@ Se não houver post na mensagem, procurar o ficheiro de post mais recente no pro
 
 > Cola o post para o qual queres a peça.
 
-Depois, **AskUserQuestion**:
+Depois, **Perguntar pelo meio interativo disponível:**
 
 ```json
 [
