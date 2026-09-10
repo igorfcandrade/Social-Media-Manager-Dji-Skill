@@ -22,7 +22,7 @@ A camada 5 nunca é opcional e é a primeira a desaparecer com pressa. Por isso 
 
 ## O gancho
 
-⬤ O Instagram declara que, para Reels, as previsões mais importantes são a probabilidade de o utilizador **reenviar** o vídeo, vê-lo até ao fim, gostar dele e ir à página do áudio. Para o Feed, prevê a probabilidade de passar alguns segundos na publicação, comentar, gostar, partilhar e tocar na foto de perfil.
+⬤ No explicador oficial publicado em 2023, o Instagram indicou, para Reels, previsões como a probabilidade de **reenviar** o vídeo, vê-lo até ao fim, gostar dele e ir à página do áudio. Para o Feed, descreveu previsões como passar alguns segundos na publicação, comentar, gostar, partilhar e tocar na foto de perfil. É um retrato histórico dos sinais publicados, não uma hierarquia atual nem um conjunto de pesos universais.
 https://about.instagram.com/blog/announcements/instagram-ranking-explained
 
 ◐ Em vídeo curto, tornar a proposta percetível cedo e duplicar a informação essencial em som, imagem e texto melhora a clareza e a acessibilidade. Não atribuir um número universal de segundos ou um efeito de distribuição. TikTok está `LOOK INTO`.
@@ -38,13 +38,13 @@ O gancho é o que **se vê**, o que **se ouve** e o que está **escrito no ecrã
 
 Lacuna de curiosidade · quebra de padrão · afirmação contrária ao senso comum · aviso de erro ("perdi X porque fiz Y") · lista numerada com âmbito fechado · *cold open* (mostrar o resultado antes do processo) · pergunta de auto-identificação · prova visual e antes-e-depois · âmbito temporal ("como fiz X em Y tempo").
 
-**Escrever 5 a 10 ganchos por ideia**, com técnicas diferentes, antes de escolher. Testar cada um contra três critérios:
+◐ Quando a escolha justificar o esforço, escrever várias alternativas de gancho com técnicas diferentes antes de escolher. A quantidade depende do risco, da novidade e do tempo disponível; não existe um número universal. Testar cada uma contra três critérios:
 
-- **imediato** — cabe em 3 segundos ou numa linha;
+- **percetível cedo** — a proposta reconhece-se sem introdução dispensável; o tempo concreto testa-se no corte e nos dados da conta;
 - **específico** — nomeia algo concreto, não uma categoria;
 - **verdadeiro** — o corpo cumpre-o.
 
-Descartar tudo o que falhe no terceiro, por muito bom que seja nos dois primeiros. Um gancho que não cumpre destrói o tempo de visualização, que é o sinal que mais pesa.
+Descartar tudo o que falhe no terceiro, por muito bom que seja nos dois primeiros. Um gancho que não cumpre cria uma quebra entre promessa e entrega; medir o efeito na retenção e nas ações pretendidas, sem lhe atribuir um peso universal na distribuição.
 
 > Os números de retenção associados a estas técnicas que circulam em blogues não têm estudo público. Usar as técnicas, ignorar as percentagens.
 
@@ -122,6 +122,8 @@ Se uma peça não aciona nenhum, vai gerar gostos e parar aí. Em negócios pequ
 
 ## Produção visual sem orçamento
 
+Se o pedido for definir ou rever uma direção de arte completa — pesquisa visual, moodboard, sistema fotográfico, proporção entre fotografia e texto ou ritmo da grelha — usar primeiro `photo-first-art-direction`. Este módulo continua responsável pela função da peça e pela produção corrente; não duplica a metodologia especializada nem substitui as decisões visuais canónicas da marca.
+
 A consistência resulta de repetir cinco decisões, não de comprar melhor câmara: ◐
 
 1. **Luz** — janela grande, luz lateral e difusa. **O sol direto é o problema, não a solução.** É a decisão de maior impacto e a mais barata.
@@ -136,12 +138,14 @@ Telemóvel: bloquear foco e exposição antes de disparar, ligar a grelha, limpa
 
 Guião em **duas colunas**: o que se diz | o que se vê e lê. Se a coluna do que se vê estiver vazia em qualquer bloco, o vídeo falha para quem está sem som.
 
-Blocos: `0-3s` gancho nas três camadas · `3-8s` promessa explícita do que vem a seguir · corpo em passos, cada um com mudança visual · `3-5s` finais de fecho.
+Blocos funcionais: abertura que torna cedo a proposta percetível nas três camadas · desenvolvimento que cumpre a promessa com mudanças visuais úteis · fecho e chamada à ação, quando necessários. As marcas de tempo são decisões do guião, não requisitos universais; registá-las depois de ler a fala e testar o corte.
 
-**Calibrar a duração pelo tempo médio de visualização real da conta**, não pelo limite da plataforma. ◑ O tempo médio de visualização por Reel ronda os 8,5 segundos (amostra de 24,3M de publicações de 375K contas geridas profissionalmente) — um vídeo de 60 segundos precisa de justificar cada segundo depois do oitavo.
+**Calibrar a duração pela ideia, pelo objetivo, pela superfície e pelos dados reais da conta**, sem confundir limite técnico com duração recomendada. ◑ Num estudo de 2026, o tempo médio de visualização por Reel rondou 8,5 segundos numa amostra de 24,3 milhões de publicações de 375 mil contas geridas profissionalmente. É contexto de mercado, não um corte obrigatório para outra conta; serve para justificar economia narrativa e formular hipóteses de duração a testar.
 *Metricool, 24,3M de publicações de 375K contas geridas profissionalmente.* https://metricool.com/press-release-instagram-study-2026/
 
-Ritmo: mudança visual frequente no ecrã. ◐ Os intervalos concretos que circulam (corte a cada 1,5-4 segundos) não têm estudo por trás — vale o princípio, não o número. E cortes rápidos sem substância produzem retenção alta e zero envios.
+Ritmo: mudar a imagem quando isso acrescenta informação, continuidade ou energia. ◐ Os intervalos concretos que circulam (corte a cada 1,5-4 segundos) não têm estudo por trás — vale o princípio, não o número. Cortes rápidos também não garantem retenção nem qualquer ação a jusante.
+
+Para transformar o guião em planos, captação, montagem, áudio, legendas, exportações e ficheiros prontos para revisão, seguir `14-producao-video-curto.md`. Para lotes ou campanhas, consolidar depois no plano de produção do módulo 13.
 
 ## Histórias — o formato diário
 
@@ -201,7 +205,7 @@ Onde estraga em concreto: rostos e mãos sintéticos em contexto que se apresent
 
 ## Modos de falha
 
-- Enterrar o gancho: "olá a todos, hoje vou falar sobre..." gasta os únicos segundos que decidem tudo.
+- Enterrar o gancho: uma introdução dispensável atrasa a proposta e deve ser comparada com uma abertura direta.
 - Gancho que promete mais do que o corpo entrega.
 - Escrever sem saber onde cai o corte, pondo a informação decisiva depois dele.
 - Aplicar a mesma extensão em todas as plataformas quando os dados apontam em direções opostas.
@@ -212,7 +216,7 @@ Onde estraga em concreto: rostos e mãos sintéticos em contexto que se apresent
 - Texto de baixo contraste sobre fotografia, ilegível ao sol.
 - Saltar o texto alternativo por pressa.
 - Escolher formato pela moda: Reels para conteúdo de referência que devia ser carrossel.
-- Cortes rápidos sem substância: retenção alta, zero envios, zero memória.
+- Cortes rápidos sem substância: acrescentam trabalho sem demonstrarem, por si, retenção, ações ou memória.
 - Investir esforço em blocos de hashtags que a própria plataforma diz não aumentarem alcance, em vez de investir no gancho.
 - Otimizar para gostos porque são visíveis, ignorando guardados e envios.
 - Publicar conteúdo de terceiros sem autorização escrita.

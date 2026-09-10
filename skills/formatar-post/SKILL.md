@@ -105,7 +105,11 @@ Depois montar por camadas, na ordem do módulo 04:
 
 **Extensão:** a mínima que cumpre a promessa do gancho. ◐ Onde cai exatamente o corte do "ver mais" varia com a aplicação, a versão e o tamanho do ecrã — não há número publicado que se possa fixar. Por isso a regra operacional não é contar caracteres: é **pôr a viragem no fim da primeira ou da segunda linha** e assumir que tudo o que vem depois pode não ser lido. ◐ Contagens fixas de linhas e de caracteres que circulam em modelos de LinkedIn não têm amostra e não se transpõem para estas plataformas — não as aplicar. ◑ Para Instagram, o maior estudo com metodologia declarada (9,1M de publicações de 82.952 páginas de empresa, jan-jul 2023) aponta para legendas curtas, abaixo de 30 palavras; é uma direção, não um limite.
 
-Se o destino tiver mais de uma plataforma, **reescrever**, não copiar. Reexportar sem marca de água é a prática segura de qualidade e autoria. A lista de distribuição publicada pelo Instagram em 2023 é histórica e não serve para diagnosticar alcance atual; PLAT-011.
+Se o destino tiver mais de uma plataforma, validar linguagem, superfície e ação em cada uma. Adaptar
+quando houver diferença real; não reescrever apenas por hábito. Em vídeo, manter um master limpo e
+reutilizar a exportação quando cumprir requisitos, direitos e pré-visualizações de todos os destinos.
+A lista de distribuição publicada pelo Instagram em 2023 é histórica e não serve para diagnosticar
+alcance atual; PLAT-011.
 
 ## Passo 3. Entregar
 
@@ -133,7 +137,9 @@ E, se houver: `Buracos:` o que ficou `[POR CONFIRMAR]`.
 - **Nunca inventar preços, prazos ou condições.** Vêm do perfil ou de um humano.
 - ⚠️ **Matéria-prima que veio de outra pessoa não se formata sem autorização.** Mensagens de cliente, depoimentos, fotografias e capturas de conversa exigem consentimento escrito **para aquele fim específico**, com nomes, moradas, telefones e detalhes de encomenda tapados. Uma marcação não transfere licença nem direito de imagem. Sem autorização registada, a prova não entra na peça — fica `[PROVA POR AUTORIZAR]` (módulo 10).
 - **Nunca citar números sem fonte** — nem os da skill de origem, nem os de blogues.
-- Um gancho que a peça não cumpre é descartado, mesmo que seja o melhor da lista. ⚠️ Um gancho exagerado compra o primeiro segundo e destrói o tempo de visualização, que é o sinal que mais pesa.
+- Um gancho que a peça não cumpre é descartado, mesmo que seja o mais chamativo da lista. Um gancho
+  exagerado quebra a promessa; o efeito mede-se na retenção e nas ações pretendidas, sem lhe atribuir
+  um peso universal na distribuição.
 - ⚠️ **Nunca fechar com interação como fim** ("comenta X", "partilha se concordas"). ⬤ No Facebook, é *engagement bait* despromovido, incluindo Páginas reincidentes; PLAT-007. No Instagram, a política oficial relevante é a proibição de recolha artificial de interação. A regra desta skill é evitar a mecânica em ambos.
 - O âmbito é vídeo curto; confirmar o rácio na superfície. Shorts podem ser quadrados ou verticais (PLAT-017). TikTok está `LOOK INTO`.
 - Se o perfil proibir travessões longos, emojis ou maiúsculas decorativas, isso ganha sobre qualquer regra desta skill.

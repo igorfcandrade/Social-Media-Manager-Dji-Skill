@@ -17,8 +17,10 @@ repositório é agnóstico.
 
 > **Nada específico de um assistente entra no repositório.**
 >
-> Nem instruções de sistema, nem pacotes gerados, nem ficheiros de configuração, nem cópias
-> reformatadas dos módulos. Se um ambiente precisa de outro formato, esse formato produz-se
+> Nem instruções de sistema, nem pacotes gerados, nem configuração de conta ou execução, nem
+> cópias reformatadas dos módulos. Metadados opcionais de interface em `agents/`, como nome
+> visível e pedido inicial, podem acompanhar a skill; não guardam credenciais nem substituem
+> as instruções portáteis do `SKILL.md`. Se um ambiente precisa de outro formato, esse formato produz-se
 > **fora** daqui, a partir da fonte, e vive onde esse ambiente vive.
 >
 > A razão não é purismo. Uma segunda cópia dos módulos é uma segunda fonte de verdade, e uma

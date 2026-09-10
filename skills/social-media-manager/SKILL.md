@@ -100,12 +100,15 @@ Três módulos transversais:
 - `references/05-estado-das-plataformas.md` — estado corrente das afirmações voláteis de plataforma, com datas de publicação, entrada em vigor, rollout e verificação separadas. Ler só o calendário em pedidos sem dependência de plataforma; ler o ID completo quando a decisão depender dele.
 - `references/09-estado-da-vigilancia.md` — calendário e conhecimento corrente das fontes de tendências. Ler só o calendário em pedidos normais; ler o estado completo e o recap anterior apenas quando o recap mensal for autorizado.
 - `references/13-plano-de-producao.md` — modo para consolidar ativos, planos, formatos, logística, reutilização, dependências e um handoff portátil para gestão de projeto. Ler quando houver campanha, lote, várias peças ou pedido explícito de produção.
+- `references/14-producao-video-curto.md` — passagem operacional de ideia/guião para planos,
+  captação, edição, legendas, som, master limpo, exportação, adaptação e revisão. Ler quando o pedido
+  incluir produzir ou preparar um ficheiro de vídeo curto, mesmo que seja uma única peça.
 
 Ler só o módulo de que precisas. Um pedido de calendário não precisa do módulo de anúncios.
 
 ## A skill de contexto e as skills de execução
 
-Esta skill **decide**; `sistema-contexto-conteudo` prepara e valida a camada factual; dezassete skills irmãs **executam**. Todas leem o mesmo contexto de marca e obedecem às regras deste ficheiro — em conflito entre uma delas e um módulo daqui, **manda o módulo**.
+Esta skill **decide**; `sistema-contexto-conteudo` prepara e valida a camada factual; dezoito skills irmãs **executam**. Todas leem o mesmo contexto de marca e obedecem às regras deste ficheiro — em conflito entre uma delas e um módulo daqui, **manda o módulo**.
 
 Usar `sistema-contexto-conteudo` ao iniciar um projeto, rever fontes de verdade, detetar dados em falta
 ou desatualizados, ou preparar uma campanha que dependa de oferta, operações, canais, ativos,
@@ -122,6 +125,7 @@ métricas ou conformidade. Não impor estrutura documental a um pedido avulso co
 | `comentario-fixado` | Comentário fixado que antecipa a pergunta repetida | 06 |
 | `guiao-video-curto` | Guião para Reels e Shorts, por blocos de tempo | 04 |
 | `capa-de-video` | Capa e primeiro fotograma no rácio confirmado do vídeo | 04 |
+| `photo-first-art-direction` | Investiga e define um sistema visual social liderado por fotografia; não cria peças durante a fase de direção | 04 |
 | `design-grafico` | Decide entre gráfico em código e imagem gerada | 04 |
 | `infografico` | Infográfico | 04 |
 | `carrossel` | Carrossel, diapositivo a diapositivo | 04 |
@@ -130,6 +134,8 @@ métricas ou conformidade. Não impor estrutura documental a um pedido avulso co
 | `painel-metricas` | Exportação de métricas para painel e decisões | 07 |
 | `matriz-de-conteudo` | Pilares × formatos, para encher o banco de ideias | 03 |
 | `pesquisa-de-nicho` | O que se está a passar no nicho, com critério de adesão | 09 |
+
+Usar `photo-first-art-direction` quando o pedido incluir pesquisa visual, moodboard, direção fotográfica, sistema de luz/fundos/enquadramentos, proporção fotografia-texto ou ritmo visual da grelha. A SMM mantém o objetivo, o papel de cada família de conteúdo, o calendário e a passagem para produção; a skill especializada define a gramática visual. As decisões visuais específicas da marca continuam a vir do contexto canónico do projeto. Depois de a direção ser aprovada, as skills de execução podem criar as peças sem reabrir a pesquisa.
 
 **Quatro regras que valem para todas:**
 
@@ -165,6 +171,10 @@ Sessão de produção em lote · fechar o mês seguinte · relatório mensal que
 Ativar quando o utilizador o pedir ou quando um conjunto de conteúdo aprovado precisar de captação, edição e passagem organizada para execução. Não o impor a uma legenda ou peça simples sem dependências materiais.
 
 Seguir `references/13-plano-de-producao.md` e usar `assets/plano-de-producao-modelo.md`. Entregar os totais deduplicados, listas de fotografias e vídeos/planos, especificações de formato, matriz logística e de direitos, reutilização, dependências/aprovações e o handoff `smm-production-handoff/v1`. O que ainda não estiver aprovado fica `proposto` ou `POR_CONFIRMAR`; nunca parece um compromisso.
+
+Se houver vídeo curto, ler também `references/14-producao-video-curto.md`. Usar o seu percurso
+para chegar a ficheiro real pronto para revisão, distinguir execução de simulação e documentar
+editor/conector, música e exportações sem transformar uma ferramenta concreta em dependência.
 
 Se `adaptive-project-manager` estiver disponível e o pedido incluir coordenação, entregar-lhe o handoff como capacidade independente. Se não estiver, devolver o mesmo bloco para utilização posterior. Não copiar a PJM para dentro desta skill, não a tratar como executor confirmado e não alterar quadros, atribuições ou datas sem autorização.
 
@@ -207,7 +217,7 @@ Não são preferências: são pontos onde o custo de errar é assimétrico.
 ## Como entregar
 
 - **Calendário** — tabela, uma linha por peça, com os campos obrigatórios do módulo 3. Não escrever as legendas completas a menos que peçam: o calendário é o plano.
-- **Plano de produção** — as oito secções do módulo 13, com matéria-prima única separada de exportações finais e handoff normalizado para a PJM.
+- **Plano de produção** — as oito secções do módulo 13, com matéria-prima única separada de exportações finais e handoff normalizado para a PJM. Com vídeo, incorporar os controlos operacionais do módulo 14 nas mesmas secções.
 - **Peça** — texto final + indicação visual + a camada de acessibilidade (texto alternativo, legendas, contraste). A acessibilidade é a primeira coisa a desaparecer com pressa; por isso está na lista e não na memória.
 - **Relatório** — a estrutura do módulo 7. Curto, e cada número termina numa recomendação.
 - **Análise ou recomendação** — a conclusão primeiro, a base de cálculo e o tamanho da amostra ao lado, e o que ficou por saber.

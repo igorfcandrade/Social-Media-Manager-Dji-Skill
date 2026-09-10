@@ -90,10 +90,13 @@ Suspender não obriga a comentar. Uma declaração de solidariedade sem relaçã
 | Plataforma | O que a fonte oficial permite concluir | Regra segura |
 |---|---|---|
 | **Facebook / Instagram** | ⬤ A biblioteca musical licenciada destina-se a uso pessoal e não comercial; certas contas empresariais têm acesso limitado. A Sound Collection disponibiliza faixas para uso comercial em Facebook e Instagram. [Meta](https://www.facebook.com/help/instagram/402084904469945) | Usar Sound Collection ou licença comercial que cubra expressamente estas plataformas |
-| **TikTok** | `LOOK INTO` — política atual não validada nesta cobertura | Não recomendar música nem publicar até rever direitos e política com autorização |
+| **TikTok** | Regras gerais `LOOK INTO`; exceção relida em 2026-09-10: ⬤ para conteúdo que promove marca, produto ou serviço, a plataforma recomenda a Commercial Music Library e exige confirmação de direitos quando se usa música fora dela. [TikTok](https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/commercial-use-of-music-on-tiktok?lang=en) | Escolher a faixa por região e colocação na CML ou guardar prova dos direitos necessários; não presumir licença fora de TikTok |
 | **YouTube** | ⬤ A Audio Library contém música e efeitos que a YouTube conhece como seguros para direitos de autor dentro da plataforma; algumas faixas exigem atribuição. A YouTube não dá orientação sobre uso fora da plataforma. [YouTube](https://support.google.com/youtube/answer/3376882) | Confirmar a licença da faixa e não inferir direitos fora do YouTube |
 
 ⚠️ **As licenças não atravessam plataformas por defeito.** Reaproveitar o formato não significa reaproveitar a faixa. Escolher música em cada destino ou comprar uma licença que cubra explicitamente todos os usos.
+
+Registar por faixa a origem, versão, uso orgânico/pago, destino, território, data e prova. O modelo
+operacional está em `14-producao-video-curto.md`.
 
 ## Dados pessoais — RGPD
 
@@ -130,6 +133,9 @@ Suspender não obriga a comentar. Uma declaração de solidariedade sem relaçã
 ### O que isto obriga em cada peça — regra para as skills de escrita
 
 **Esta é a secção canónica da quarta regra transversal do `SKILL.md`.** Todas as skills que produzem texto publicável a aplicam.
+
+**TikTok — regras gerais `LOOK INTO`; exceção oficial verificada em 2026-09-10.** ⬤ Quando o conteúdo promove a própria marca, produto ou serviço, o TikTok exige ativar a definição de divulgação comercial e identifica-o como `Promotional content`; para promoção de terceiro, usa `Paid partnership`. A plataforma afirma que ativar a definição não afeta a distribuição no feed. [TikTok; restante plataforma `LOOK INTO`](https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/promoting-a-brand-product-or-service/)
+Isto confirma apenas a divulgação comercial, não duração, formato, algoritmo ou disponibilidade da conta; esses pontos continuam `LOOK INTO` e confirmam-se na superfície.
 
 Separar os dois casos, porque o estatuto é diferente e confundi-los é sobrecertificar:
 

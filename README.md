@@ -1,9 +1,9 @@
 # Social Media Skills (PT-PT)
 
-Conjunto de **19 skills** de gestão de redes sociais em português de Portugal, portáteis entre
+Conjunto de **20 skills** de gestão de redes sociais em português de Portugal, portáteis entre
 ambientes que consigam carregar skills em Markdown.
 
-Uma skill **governa** e dezoito **executam**. O ofício vive nas skills; os factos do caso chegam
+Uma skill **governa**, uma **prepara o contexto factual** e dezoito **executam**. O ofício vive nas skills; os factos do caso chegam
 pela mensagem, anexos, fontes ligadas ou documentos do projeto. O ambiente fornece os meios de
 interação e execução. As três camadas nunca se misturam.
 
@@ -15,7 +15,7 @@ interação e execução. As três camadas nunca se misturam.
 | **Voz e contexto** | `construir-voz` · `voz-newsletter` · `sistema-contexto-conteudo` |
 | **Escrita** | `escrever-post` · `formatar-post` · `gerar-ganchos` · `comentario-fixado` |
 | **Vídeo curto** | `guiao-video-curto` · `capa-de-video` |
-| **Visual** | `design-grafico` · `carrossel` · `infografico` · `post-de-citacao` |
+| **Visual** | `photo-first-art-direction` · `design-grafico` · `carrossel` · `infografico` · `post-de-citacao` |
 | **Perfis e dados** | `otimizar-perfil` · `painel-metricas` · `avaliar-post` |
 
 Serve qualquer organização sem pressupor setor, dimensão, equipa, website ou percurso de conversão.
@@ -26,6 +26,9 @@ Serve qualquer organização sem pressupor setor, dimensão, equipa, website ou 
   nos módulos é como exemplo metodológico ou declaração de financiador de um estudo.
 - **TikTok, Threads e X estão `LOOK INTO`.** Sem afirmações atuais sobre algoritmo,
   limites ou funcionalidades. Fora de cobertura validada.
+- **Vídeo curto de ponta a ponta.** O módulo operacional cobre brief, planos, captação, edição,
+  legendas, som, master limpo, exportações e revisão, sem depender de editor ou conector específico.
+  Uma capacidade só é apresentada como automática depois de estar declarada e testada.
 - **Vídeo longo está fora.** O conjunto produz vídeo curto vertical (Reels, Shorts).
 - **Não publica nada.** Não acede a contas, não envia, não agenda, não gasta em
   anúncios. Produz rascunhos para um humano aprovar.

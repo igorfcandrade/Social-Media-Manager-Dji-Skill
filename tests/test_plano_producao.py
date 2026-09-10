@@ -14,6 +14,9 @@ class ProductionPlanContractTests(unittest.TestCase):
         self.reference = (
             SMM / "references" / "13-plano-de-producao.md"
         ).read_text(encoding="utf-8")
+        self.video_reference = (
+            SMM / "references" / "14-producao-video-curto.md"
+        ).read_text(encoding="utf-8")
         self.template = (
             SMM / "assets" / "plano-de-producao-modelo.md"
         ).read_text(encoding="utf-8")
@@ -85,3 +88,35 @@ class ProductionPlanContractTests(unittest.TestCase):
         # concreto produz-se fora daqui. Ver INTEGRAR.md.
         self.assertFalse((ROOT / "_gpt").exists(), "pacote específico de um assistente no repositório")
         self.assertTrue((ROOT / "INTEGRAR.md").is_file())
+
+    def test_video_workflow_reaches_a_real_reviewable_file(self) -> None:
+        for marker in (
+            "[PLATAFORMA — confirmado AAAA-MM-DD]",
+            "[PRODUÇÃO]",
+            "[HIPÓTESE]",
+            "lista de planos",
+            "Percurso iPhone",
+            "Caminho manual no Canva",
+            "Caminho assistido por conector",
+            "MASTER-LIMPO",
+            "por faixa, uso e destino",
+            "Não existe obrigação universal de criar um ficheiro diferente por canal",
+            "Revisão final",
+            "pronto-para-revisão",
+            "REAL",
+            "SIMULADO",
+        ):
+            self.assertIn(marker, self.video_reference)
+
+    def test_video_workflow_does_not_promise_unexposed_automation(self) -> None:
+        for marker in (
+            "não significa que um conector a consiga executar",
+            "Não inferir controlo de timeline",
+            "não disponível",
+            "Não fabricar prova de execução",
+        ):
+            self.assertIn(marker, self.video_reference)
+
+    def test_batch_plan_routes_to_video_without_adding_a_ninth_section(self) -> None:
+        self.assertIn("14-producao-video-curto.md", self.reference)
+        self.assertIn("sem criar uma nona secção", self.reference)
