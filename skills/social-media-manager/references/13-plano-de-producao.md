@@ -4,6 +4,10 @@ Transforma um conjunto de peças acordado numa lista única do que é preciso ca
 
 Usar este modo quando o utilizador pedir um **plano de produção**, uma lista de fotografias ou planos, um lote, uma campanha, um calendário com várias peças ou uma passagem organizada para gestão de projeto. Numa legenda avulsa ou numa peça simples, só o usar se for pedido ou se a produção tiver dependências materiais.
 
+Quando o plano incluir vídeo curto, aplicar também `14-producao-video-curto.md` à passagem do
+guião para captação, edição, master limpo, áudio, exportação e revisão. Este módulo consolida o lote;
+o módulo 14 especifica a execução do vídeo sem duplicar factos do caso.
+
 ## Fronteira do modo
 
 O plano especifica a produção; não publica, não agenda, não contrata, não reserva, não compra, não confirma disponibilidade e não atribui pessoas ou datas por suposição.
@@ -61,11 +65,20 @@ Cada fotografia diz exatamente **o quê, quem, onde e como** deve aparecer, mais
 
 Cada vídeo final aponta para uma lista ordenada de planos. Cada plano inclui enquadramento, ação, duração útil pretendida, áudio/fala, texto visível, pessoa, produto, local, adereços, continuidade e entrega(s) que serve. Não confundir a duração útil do plano com o tempo total de gravação.
 
+Para vídeo, distinguir `REAL` de `SIMULADO`, e não marcar um vídeo como `pronto-para-revisão`
+sem um ficheiro exportado que tenha sido aberto e inspecionado. Registar o projeto editável, o
+`MASTER-LIMPO`, as capacidades do editor/conector efetivamente testadas e a ficha `AUD-###` por
+faixa, uso e destino conforme o módulo 14.
+
 ### 5. Confirmar formatos
 
 Por exportação, declarar plataforma, superfície, tipo de ficheiro, orientação, rácio, dimensões quando confirmadas, duração-alvo, legendas, texto alternativo ou equivalente, capa e zonas seguras.
 
 Um rácio ou limite volátil traz a origem: ID `PLAT`, fonte canónica da marca, verificação na própria superfície ou `decisão de produção`. Quando a informação não estiver confirmada, escrever `POR_CONFIRMAR antes de captar/exportar`. Não converter uma prática comum em regra da plataforma.
+
+Não criar automaticamente uma exportação por canal. A mesma `EXP-###` pode servir várias
+colocações quando o ficheiro limpo satisfaz rácio, duração, texto, capa, zonas seguras, direitos e
+pré-visualização em cada destino. Criar outra exportação apenas perante uma diferença material.
 
 ### 6. Fazer a matriz logística e de direitos
 
@@ -111,6 +124,10 @@ Usar `../assets/plano-de-producao-modelo.md` e devolver, por esta ordem:
 6. mapa de reutilização entre peças;
 7. dependências e aprovações;
 8. handoff normalizado para a PJM.
+
+Se o lote incluir vídeo, acrescentar dentro das secções existentes — sem criar uma nona secção —
+o estado dos originais, projeto editável, master limpo, exportações observadas, fichas de música e
+veredicto de revisão do módulo 14.
 
 Antes de entregar, verificar que todos os IDs referidos existem, que cada entrega tem ativos ou uma lacuna explícita, que os totais resultam das listas deduplicadas e que nenhum `POR_CONFIRMAR` foi convertido silenciosamente em decisão.
 

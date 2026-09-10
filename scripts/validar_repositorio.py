@@ -61,6 +61,16 @@ def field(block: str, name: str) -> str | None:
     return match.group(1).strip().strip('"\'')
 
 
+def validar_executoras(texto: str, raiz: Path) -> list[str]:
+    """Cada executora do encaminhador tem de acompanhar a distribuição."""
+    nomes = re.findall(r"^\| `([a-z0-9-]+)` \|", texto, re.M)
+    return [
+        f"encaminhamento para {nome}: falta skills/{nome}/SKILL.md"
+        for nome in nomes
+        if not (raiz / nome / "SKILL.md").is_file()
+    ]
+
+
 def main() -> int:
     errors: list[str] = []
     skill_paths = sorted(SKILLS.glob("*/SKILL.md"))
@@ -100,6 +110,9 @@ def main() -> int:
         if path.parent.name not in {"social-media-manager", "sistema-contexto-conteudo"}:
             if "references/contexto-do-caso.md" not in text:
                 fail(errors, f"{relative}: falta o contrato de contexto agnóstico")
+
+    router = (SKILLS / "social-media-manager/SKILL.md").read_text(encoding="utf-8")
+    errors.extend(validar_executoras(router, SKILLS))
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     count_match = re.search(r"Conjunto de \*\*(\d+) skills\*\*", readme)

@@ -50,6 +50,12 @@ Contar matéria-prima única separadamente dos ficheiros finais.
 |---|---|---|---|---|---|---|---|---|---|
 | `VID-001` | | | | | | | | | proposto |
 
+### Controlo operacional do vídeo
+
+| Vídeo | Originais (`REAL`/`SIMULADO`) | Projeto editável | Capacidades assistidas testadas | `MASTER-LIMPO` | Exportação aberta e inspecionada | Veredicto |
+|---|---|---|---|---|---|---|
+| `VID-001` | | | declarada / testada / não disponível | `POR_CONFIRMAR` | não | proposto |
+
 ### Planos a captar
 
 | Ordem | ID | Vídeo(s) | Enquadramento e movimento | Ação/o que aparece | Duração útil alvo | Fala/áudio/texto visível | Pessoa/produto/local/adereços | Continuidade e direitos | Critério de aceitação |
@@ -62,6 +68,15 @@ Contar matéria-prima única separadamente dos ficheiros finais.
 |---|---|---|---|---|---|---|---|---|
 | `EXP-001` | | | `POR_CONFIRMAR` | `POR_CONFIRMAR` | `POR_CONFIRMAR` | | | PLAT-ID / fonte canónica / verificação na superfície / decisão de produção |
 
+Uma `EXP` pode servir várias colocações quando passa nos requisitos, direitos e pré-visualização
+de cada uma. Nova exportação apenas para uma diferença material.
+
+### Ficheiros exportados — alvo e observado
+
+| ID | Caminho | Formato/codec observado | Dimensões/rácio | Duração/cadência | Tamanho | Áudio/legendas | Inspecionado em |
+|---|---|---|---|---|---|---|---|
+| `EXP-001` | `POR_CONFIRMAR` | | | | | | `POR_CONFIRMAR` |
+
 ## 5. Pessoas, produtos, locais, adereços e autorizações
 
 | ID | Tipo | Item/requisito | Ativos bloqueados | Disponibilidade/estado | Fonte ou responsável pela confirmação | Autorização/prova necessária |
@@ -69,6 +84,12 @@ Contar matéria-prima única separadamente dos ficheiros finais.
 | `LOG-001` | pessoa / produto / local / adereço / equipamento / autorização | | | `POR_CONFIRMAR` | | |
 
 Confirmar, quando aplicável: direito de imagem · menores · testemunhos · conteúdo de terceiros · música · local privado · alegações reguladas · identificação de publicidade.
+
+### Música — uma ficha por faixa, uso e destino
+
+| ID | Faixa/autor/versão | Origem/URL | Verificado em | Uso | Destinos/território | Prova da licença | Estado |
+|---|---|---|---|---|---|---|---|
+| `AUD-001` | | | | orgânico / pago | | | autorizado / `POR_CONFIRMAR` / rejeitado |
 
 ## 6. Mapa de reutilização entre peças
 
@@ -174,3 +195,5 @@ next_state_after_return: review
 - [ ] Pessoas, datas e atribuições propostas não aparecem como compromissos confirmados
 - [ ] A autorização de alteração está explícita
 - [ ] O handoff conserva escopo, critérios de aceitação e contrato de retorno
+- [ ] Vídeo marcado `pronto-para-revisão` tem ficheiro real aberto e inspecionado
+- [ ] Master limpo, projeto editável, capacidades testadas e fichas de música estão registados

@@ -98,7 +98,12 @@ Escrever isto na entrega, com o número real. Uma frase do género *"isto são 3
 
 Cinco critérios, 1 a 10 cada, total sobre 50. **A escala é um instrumento desta skill para ordenar prioridades de correção, não uma medição.** Não a apresentar como se fosse um dado, nem comparar totais entre avaliações feitas com bases de dados diferentes.
 
-1. **Gancho** — imediato, específico e **cumprível**. Um gancho que promete mais do que o corpo entrega compra o primeiro segundo e destrói a retenção, que é o sinal que mais pesa. Critérios em `references/04`. Com histórico, 8+ exige que o tipo de gancho coincida com um padrão confirmado três vezes; **sem histórico**, 8+ exige execução manifestamente boa nos três critérios e a nota sai marcada como juízo de ofício.
+1. **Gancho** — percetível cedo, específico e **cumprível**. Um gancho que promete mais do que o
+corpo entrega quebra a promessa; avaliar o efeito provável na clareza e comparar retenção e ações
+pretendidas nos dados da conta, sem declarar um peso universal. Critérios no módulo 04. Com
+histórico, 8+ exige que o tipo de gancho coincida com um padrão confirmado três vezes; **sem
+histórico**, 8+ exige execução manifestamente boa nos três critérios e a nota sai marcada como
+juízo de ofício.
 2. **Voz** — contra a secção 5 do perfil: tratamento, adjetivos de tom, palavras da casa, palavras proibidas, grafias fixas, emojis. Comparar com os exemplos aprovados, que valem mais do que os adjetivos.
 3. **Substância** — há facto, história, prova ou passo concreto? Ou é texto plausível e vazio? Sem matéria-prima real fornecida por um humano, este critério não passa de 5.
 4. **Estrutura e formato** — uma ideia só, uma chamada à ação só, legível no telemóvel, a viragem antes do corte do "ver mais". Vídeo curto: rácio confirmado para a superfície, guião em duas colunas e compreensão sem depender do som. Shorts podem ser quadrados ou verticais (PLAT-017); TikTok está `LOOK INTO`. **Testar contra o comportamento escolhido no Passo 2:** a peça pede esse degrau e só esse, e a escada de atrito do módulo 04 diz que o que a peça deu chega para o pedir? Uma peça excelente que pede o degrau errado leva nota baixa aqui.
@@ -107,7 +112,10 @@ Cinco critérios, 1 a 10 cada, total sobre 50. **A escala é um instrumento dest
    - alegação sujeita a regulação, ou que a marca não consiga provar (módulo 10, secção 6 do perfil);
    - conteúdo de terceiros sem **autorização escrita** — uma marcação não transfere licença nem direito de imagem;
    - testemunho, fotografia ou caso de cliente sem consentimento **para este fim concreto** (RGPD, módulo 10);
-   - música: ⚠️ numa conta de empresa, um áudio em tendência pode não estar coberto por licença comercial, e a licença da Meta Sound Collection **não** acompanha o vídeo para outras plataformas; TikTok está `LOOK INTO` e o YouTube exige confirmação própria (módulo 10);
+   - música: ficha por faixa, uso e destino ausente ou incompleta; acesso a um áudio em tendência ou
+     uma subscrição não prova licença comercial. A licença da Meta Sound Collection não acompanha o
+     vídeo para outras plataformas; TikTok está `LOOK INTO` fora das exceções oficiais verificadas
+     no módulo 14, e o YouTube exige confirmação própria (módulo 10);
    - imagem, vídeo ou áudio realista gerado ou alterado por IA **sem cumprir a política atual da plataforma** — ⬤ a Meta aplica "AI Info"; TikTok está `LOOK INTO`; e nunca depoimentos, casos ou resultados inventados, com ou sem rótulo (módulo 04);
    - **acessibilidade**, item a item e não como impressão geral: texto alternativo escrito (e por slide, num carrossel), legendas revistas **manualmente**, ⬤ contraste mínimo 4,5:1 para texto normal e 3:1 para texto grande pela WCAG 2.2 AA, informação essencial que não vive só na cor nem só na imagem, hashtags em CamelCase;
    - isco de interação ⬤ — o Facebook declara despromover publicações que pedem explicitamente gostos, partilhas, comentários ou votos; PLAT-007. O Instagram proíbe recolher artificialmente interação. ⚠️ Distinguir de uma pergunta genuína ou de uma sondagem: o problema é pedir a reação pela reação.

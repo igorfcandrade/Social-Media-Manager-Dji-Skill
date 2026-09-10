@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo-First Art Direction"
+  short_description: "Research and define photo-led social identities"
+  default_prompt: "Use $photo-first-art-direction to research and define a photo-first social media art direction for this brand."
