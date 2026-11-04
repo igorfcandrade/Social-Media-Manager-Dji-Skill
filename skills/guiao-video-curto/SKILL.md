@@ -1,215 +1,91 @@
 ---
 name: guiao-video-curto
-description: "Escreve o guião completo de um vídeo curto — Reel ou Short — em duas colunas (o que se diz | o que se vê e lê), por blocos de tempo, com gancho nas três camadas, chamada à ação única e a camada de acessibilidade. Confirma o rácio na superfície; Shorts podem ser quadrados ou verticais. TikTok fica LOOK INTO até revisão própria. Pode partir de um vídeo de referência e fazer-lhe engenharia inversa, por análise manual guiada ou automática se existirem ferramentas autorizadas. Usa esta skill SEMPRE que o pedido envolver um vídeo curto."
+description: "Escreve ou revê o guião editorial de um vídeo curto, com ação visual, fala e texto quando necessários. Usa para ideias, guiões e adaptação de uma referência; captação, montagem e exportação pertencem ao módulo de produção."
 ---
 
 # Guião de vídeo curto
 
 ## Gate de revisão
 
-Antes de executar, correr `../social-media-manager/scripts/verificar_revisao.py`, resolvido relativamente a este ficheiro. Sem terminal, ler os blocos `Calendário` de `05-estado-das-plataformas.md` e `09-estado-da-vigilancia.md`. Se uma data chegou, passou ou é inválida, avisar uma vez por conversa; a primeira linha deve ser exatamente `Skill necessita de revisão`. Continuar com as limitações declaradas. O aviso não autoriza pesquisa, acesso a contas nem atualização.
+Correr `../social-media-manager/scripts/verificar_revisao.py`, relativamente a este ficheiro,
+uma vez por execução. Sem terminal, ler só `Calendário` nos estados 05 e 09.
+Se devido ou inválido, a primeira linha do aviso é `Skill necessita de revisão`.
+O aviso não autoriza novas ações externas e não bloqueia o guião independente da regra vencida.
+Manter pendente apenas a decisão que precisa de confirmação; respeitar autorização já existente.
 
-## Contrato de contexto
+## Contexto e resultado
 
-Aplicar `../social-media-manager/references/contexto-do-caso.md`. O contexto pode chegar na mensagem, em anexos, em fontes ligadas ou em documentos com qualquer nome e formato. Neste ficheiro, «perfil» significa a fonte de contexto disponível; referências a números de secção servem apenas para o modelo opcional incluído no pacote. Não exigir esse modelo, não o copiar automaticamente e não tratar website, checkout, equipa ou ferramenta como pré-requisito. Pedir apenas a informação que muda materialmente esta tarefa.
+Aplicar `../social-media-manager/references/contexto-do-caso.md`. Ler voz, objetivo, visual,
+alegações e meios relevantes já fornecidos. Perguntar só pelo que muda esta peça. Não presumir
+website, modelo de negócio ou formato documental.
 
-Skill de execução para a estrutura editorial de vídeo curto. Reels usam normalmente vertical; Shorts podem ser quadrados ou verticais nas condições de PLAT-017. Confirmar o rácio na superfície. As regras gerais de TikTok estão `LOOK INTO`; o módulo de produção regista apenas as exceções oficiais que tenham sido verificadas.
+Entregar o guião solicitado, não exigir um vídeo para o validar. Um guião realmente escrito é
+`rascunho`, `pronto-para-revisão-editorial` ou `aprovado` por quem tem essa função.
+`SIMULADO` identifica apenas dados, resultados ou exemplos fictícios. Captação e exportação
+ainda não realizadas ficam `por executar`.
 
-O julgamento vive nos módulos: a anatomia da peça, as três camadas do gancho, a escada de chamadas à ação e a lista de acessibilidade estão em `../social-media-manager/references/04-criacao-de-conteudo.md` — **ler esse módulo antes de escrever**. O método de plataformas está em `../social-media-manager/references/05-plataformas.md`; para qualquer regra volátil citada abaixo, ler também o ID em `../social-media-manager/references/05-estado-das-plataformas.md`. O critério para entrar ou não numa tendência está em `../social-media-manager/references/09-tendencias-e-concorrencia.md`.
+## Construir a peça
 
-## Arranque imediato
+Ler a anatomia e acessibilidade do módulo
+`../social-media-manager/references/04-criacao-de-conteudo.md`.
+Definir ideia e intenção principal; propor duração pela matéria necessária e ajustá-la pela
+leitura/ensaio. Não transformar duração técnica, média de mercado ou prática num prazo editorial.
 
-Se o tema ou o link já vierem na mensagem, usá-los e saltar diretamente para o passo que faltar. Não resumir a skill, não explicar o que é um gancho antes de o escrever, não pedir autorização para começar.
+Escrever por blocos funcionais: abertura, desenvolvimento e fecho quando útil. Indicar ação
+visual, fala, texto e duração proposta apenas onde acrescentem informação. Som e texto no ecrã
+são opcionais; um gancho visual pode bastar. Num vídeo silencioso sem informação verbal,
+legendas de fala são `não aplicável`; verificar a compreensão visual e preparar descrição
+equivalente conforme o destino. Quando existe fala relevante, prever legendas revistas.
 
-## Passo 0. Contexto do caso
+Não obrigar cada passo a mudar de plano nem impor CTA explícita, texto na capa ou uma grelha
+de segundos. Cumprir a promessa, a direção visual e o comportamento procurado. Avaliar clareza
+e pertinência sem prometer resultados de distribuição.
 
-Localizar e ler voz, pilares, alegações, capacidade de produção, permissões de imagem e aprendizagens
-de vídeo. Não exigir um nome ou estrutura documental. Sem estes dados, pedir apenas os que forem
-necessários; se ainda assim se avançar, marcar as decisões não confirmadas. O tempo médio de
-visualização vem dos dados da própria conta, quando existir, e nunca se estima.
+## Referência opcional
 
-## Passo 1. Vídeo de referência — opcional, dois caminhos
-
-Um vídeo de referência é matéria-prima útil, não requisito. Se não houver, dizer numa linha que se avança sem referência e ir para o Passo 2.
-
-Existindo referência, verificar que meios autorizados estão disponíveis. A ausência de integração
-muda o caminho, não o resultado.
-
-### 1A. Caminho manual — o predefinido, funciona sem nada instalado
-
-Pedir ao utilizador que veja o vídeo de referência **duas vezes** (uma com som, outra em silêncio) e responder. Pedir ao utilizador, pelo meio interativo disponível, o que é escolha, e pedir texto livre para o resto.
-
-```json
-[
-  {"question": "O que acontece nos primeiros instantes?", "header": "Gancho", "multiSelect": false,
-   "options": [
-     {"label": "Resultado primeiro", "description": "Mostra o fim antes do processo (cold open)"},
-     {"label": "Pergunta ou identificação", "description": "\"Se fazes X, isto é para ti\""},
-     {"label": "Afirmação contrária", "description": "Contraria o senso comum ou avisa de um erro"},
-     {"label": "Quebra de padrão visual", "description": "Movimento, som ou imagem inesperada"}
-   ]},
-  {"question": "Como está construído o ritmo?", "header": "Ritmo",
-   "options": [
-     {"label": "Plano único a falar", "description": "Uma pessoa, câmara fixa, texto no ecrã"},
-     {"label": "Cortes frequentes", "description": "Muda de plano várias vezes por passo"},
-     {"label": "Processo mostrado", "description": "Mãos a fazer, sem rosto"},
-     {"label": "Texto conduz, imagem ilustra", "description": "O ecrã escrito carrega a mensagem"}
-   ]},
-  {"question": "Como fecha?", "header": "Fecho",
-   "options": [
-     {"label": "Pergunta para comentário", "description": "Abre conversa"},
-     {"label": "Convite a guardar ou enviar", "description": "Gesto com custo"},
-     {"label": "Volta ao início", "description": "Fecha o ciclo e provoca revisualização"},
-     {"label": "Corta a seco", "description": "Sem CTA explícita"}
-   ]}
-]
-```
-
-E a seguir, em texto livre, três coisas que valem mais do que qualquer análise automática:
-1. **As primeiras palavras ditas, transcritas à letra**, e o texto que está no ecrã no mesmo instante.
-2. **A duração total** e mais ou menos onde cada secção começa e acaba.
-3. **Em que ponto é que perdeste o interesse na segunda visualização e porquê** — é uma observação útil de uma pessoa, não uma métrica da audiência nem um substituto dos dados da conta.
-
-### 1B. Caminho assistido — só com meios disponíveis e autorizados
-
-Se o ambiente permitir analisar a referência, é possível obter transcrição com marcas de tempo,
-contagem de planos e estrutura. Confirmar autorização antes de descarregar ou processar um ficheiro.
-
-Se qualquer passo automático falhar (actor sem resultados, vídeo privado, quota), **não fabricar análise**: dizer o que falhou numa linha e cair para 1A.
-
-### O que se perde no caminho manual, dito com honestidade
-
-Perde-se a transcrição literal completa com marcas de tempo, a contagem exata de cortes e as métricas públicas do vídeo (visualizações, gostos, comentários). A observação manual ainda permite descrever estrutura, mecanismo do gancho e ponto de perda de interesse do observador. Não extrapolar essa reação para a audiência nem afirmar pesos universais das métricas; alcance, guardados e envios de conteúdo alheio **não são visíveis de fora** (`../social-media-manager/references/09-tendencias-e-concorrencia.md`).
-
-Nunca inventar números do vídeo de referência. O que não foi observado não se escreve.
-
-⚠️ **A referência analisa-se, não se recicla.** Nada do ficheiro alheio — imagem, áudio, legendas, texto no ecrã — entra no vídeo novo. O que se reaproveita é a *estrutura*, que não é de ninguém. A orientação de originalidade do Instagram considera insuficientes alterações cosméticas a conteúdo alheio; consultar PLAT-002 antes de apresentar a regra como atual e confirmar o Estado da conta quando a decisão depender dela.
-
-## Passo 2. Tema, comportamento e duração
-
-Se não vier na mensagem, **Perguntar pelo meio interativo disponível:**
-
-```json
-[
-  {"question": "Qual é o tema do vídeo?", "header": "Tema", "multiSelect": false,
-   "options": [
-     {"label": "Escrevo o tema", "description": "Uma frase a seguir"},
-     {"label": "Aconteceu isto", "description": "Um episódio real — a matéria-prima mais forte"},
-     {"label": "Adaptar peça existente", "description": "Colo o post, artigo ou email a reaproveitar"}
-   ]},
-  {"question": "Que comportamento queres provocar?", "header": "Objetivo",
-   "options": [
-     {"label": "Ver até ao fim", "description": "Retenção — descoberta junto de quem não segue"},
-     {"label": "Enviar a alguém", "description": "Partilha privada; medir o efeito nesta conta"},
-     {"label": "Guardar", "description": "Referência utilizável, para voltar"},
-     {"label": "Comentar", "description": "Conversa — abre caminho à mensagem privada"}
-   ]},
-  {"question": "Onde vai sair?", "header": "Destino", "multiSelect": true,
-   "options": [
-     {"label": "Instagram Reels", "description": "9:16"},
-     {"label": "TikTok", "description": "LOOK INTO — não produzir como regra atual sem revisão autorizada"},
-     {"label": "YouTube Shorts", "description": "Quadrado ou vertical até 3 min, com datas por tipo de canal; PLAT-017"},
-     {"label": "Facebook Reels", "description": "9:16"}
-   ]}
-]
-```
-
-◐ **Escolher um comportamento principal.** Outros podem acontecer, mas uma prioridade clara ajuda a decidir o fecho e a avaliar o resultado.
-
-**Duração:** calibrar pela ideia, objetivo, superfície e dados reais da conta; o limite técnico não é uma recomendação editorial. ◑ Na ausência de dados próprios, o módulo 04 conserva um estudo de mercado com tempo médio de visualização por Reel na ordem dos 8,5 segundos (24,3 milhões de publicações de 375 mil contas geridas profissionalmente). Usá-lo apenas como contexto para formular um primeiro corte e uma hipótese; não como prazo obrigatório. A duração final vem da leitura em voz alta, do teste do corte e da pré-visualização.
+Se existir referência, ler `references/analisar-referencia.md`. Usar meios acessíveis para
+observar o conteúdo. Sem eles, pedir só uma descrição/transcrição útil; não exigir novo
+consentimento para leitura/processamento já abrangido pelo pedido. Nunca fabricar observações.
+Uma referência pode ser própria ou licenciada: confirmar direitos antes de reutilizar elementos.
+PLAT-002 trata a política de originalidade; não confundir análise de estrutura com licença.
 
 ### Vários destinos ao mesmo tempo
 
-**Uma validação por destino; uma nova exportação apenas quando houver diferença material.** O mesmo ficheiro limpo pode servir várias superfícies se passar os requisitos, direitos e pré-visualização de cada uma.
+Uma validação por destino; o mesmo ficheiro limpo pode servir várias superfícies.
+A regra de reutilização, master limpo e novas exportações pertence ao módulo 14.
+Os canais vêm do contexto (a “secção 4 do perfil” é apenas o modelo legado).
+Um destino novo pedido explicitamente pode ser explorado sem passar a canal operacional.
 
-- Confirmar o **rácio e a duração** de cada destino antes de filmar. Se divergirem, proteger o enquadramento na captação ou planear cortes próprios.
-- Verificar **texto no ecrã e legendas** na interface real de cada superfície. Só os reposicionar quando as zonas de interface ou o recorte o exigirem.
-- Manter um `MASTER-LIMPO`, sem marca de água de outra aplicação e sem música restrita a uma superfície. Reexportar apenas quando mudarem corte, rácio, texto, capa, música, identificação ou requisito técnico.
-- ⚠️ **Destinos que não estejam na secção 4 do perfil não se produzem.** Perguntar porquê primeiro.
+Consultar apenas os registos necessários: PLAT-017 para classificação de Shorts, PLAT-003
+para hashtags, PLAT-007 para engagement bait e PLAT-011 como histórico, sem pesos atuais.
+TikTok mantém cobertura geral `LOOK INTO`; usar só as afirmações delimitadas no registo 05.
+Distinguir requisitos confirmados, recomendações de produção e hipóteses.
 
-## Passo 3. Escrever o guião
+## Rever e entregar
 
-Espinha por blocos funcionais, do módulo 04. As marcas de tempo são propostas que se ajustam depois da leitura e do primeiro corte:
+Rever apenas o que existe nesta etapa:
 
-| Bloco | Função |
-|---|---|
-| abertura | Tornar cedo a proposta percetível nas **três camadas** |
-| desenvolvimento | Cumprir a promessa, sem introdução dispensável |
-| corpo | Passos, **cada um com mudança visual** |
-| fecho | Chamada à ação, quando fizer sentido |
+- coerência entre promessa, ação visual e fecho;
+- voz/visual e factos contra as fontes do caso;
+- fala e texto propostos; necessidades de legendagem/acessibilidade;
+- viabilidade dos planos e materiais em falta;
+- direitos ou decisões que afetem a futura captação.
 
-**Duas colunas, sempre.** A coluna do que se vê assegura que a informação essencial não depende apenas do som. Acrescentar legendas revistas é prática de acessibilidade. Shorts podem ser quadrados ou verticais e ter até três minutos nas condições de PLAT-017; TikTok está `LOOK INTO` e não fornece regras atuais.
+A inspeção do MP4, a sincronização real, o som e a interface da plataforma pertencem à produção,
+não são caixas que se marcam como cumpridas num guião. Para música, direitos e identificação
+comercial, encaminhar para os módulos 10 e 14 sem duplicar políticas ou licenças.
 
-O gancho escreve-se nas três camadas em simultâneo — **o que se vê · o que se ouve · o que está escrito no ecrã** — e as três apontam para a mesma promessa. Se for preciso gerar variações antes de escolher, chamar `gerar-ganchos`.
+Formato curto, adaptável ao pedido:
 
-Rever **de trás para a frente**: a chamada à ação é coerente com a promessa? O corpo cumpre-a? O gancho promete o que o corpo entrega? Se não, corrige-se o gancho, não o corpo.
-
-A chamada à ação não pode custar mais do que aquilo que o vídeo acabou de dar — escada de atrito no módulo 04. ⚠️ Nada de "marca três amigos" nem "comenta EU QUERO": ⬤ o Facebook declara a despromoção de *engagement bait* e de Páginas reincidentes; PLAT-007. ⬤ O Instagram proíbe a recolha artificial de gostos, seguidores ou partilhas. Pedidos genuínos de ajuda, conselho ou recomendação são diferentes de interação como fim.
-
-## Passo 4. Verificações antes de entregar
-
-- [ ] Rácio confirmado para a superfície, legível, sem bordas nem marca de água de outra aplicação e com informação essencial também visível — boa prática de produção; Shorts podem ser quadrados ou verticais (PLAT-017) e a lista de distribuição publicada pelo Instagram em 2023 é histórica (PLAT-011).
-- [ ] Cada destino foi validado; a exportação foi reutilizada ou separada por uma diferença registada, nunca apenas por hábito.
-- [ ] Legendas revistas **à mão** — nomes próprios, números e preços saem errados nas automáticas.
-- [ ] Texto e legendas fora das zonas da interface (nome de utilizador, botões laterais, barra de progresso), verificadas na aplicação real.
-- [ ] Contraste do texto sobre imagem: ⬤ mínimo 4,5:1 (3:1 para texto grande), WCAG 2.2 AA.
-- [ ] Informação essencial nunca só na cor nem só no áudio.
-- [ ] Hashtags dentro do limite confirmado na conta — produzir até cinco é compatível com o rollout oficial conhecido; PLAT-003. Não inventar uma data global de entrada em vigor.
-- [ ] Texto alternativo escrito para a capa (não fica só no formato de saída — verifica-se aqui).
-- [ ] Rótulo de IA segundo a plataforma e o módulo 10. ⬤ A Meta aplica informação por deteção ou declaração. TikTok está `LOOK INTO`. ⬤ O artigo 50.º do AI Act exige a quem publica profissionalmente divulgar *deepfakes* e certos textos de interesse público. ◐ Na dúvida, este sistema identifica conteúdo realista ou materialmente alterado por IA.
-- [ ] **Áudio:** existe uma ficha por faixa, uso e destino. O acesso a uma biblioteca ou uma subscrição não prova licença comercial nem multicanal; consultar o módulo 14 e o módulo 10.
-- [ ] **Identificação publicitária**, havendo parceria paga ou promoção de produto próprio: ⬤ a menção vai **no início** — sobreposta enquanto se fala do produto ou dita em voz alta antes — nunca só no fim nem enterrada nas hashtags. Usar também a ferramenta nativa da plataforma. Módulo 10.
-- [ ] **Quem aparece em câmara** está na secção 8 do perfil e deu autorização. Cliente, testemunho ou imagem de terceiros: autorização **por escrito**, para este uso. Uma marcação não transfere licença nem direito de imagem.
-- [ ] Nenhum preço, prazo ou condição escrito a partir desta skill: vêm do perfil ou de um humano.
-
-## Passo 5. Formato de saída
-
-```
-GUIÃO — [título de trabalho]
-Destino: [Reels / Shorts] · rácio [confirmado] · alvo [N]s
-Comportamento pretendido: [um]
-Referência: [link ou "sem referência"] · análise: [manual / automática]
-
-| Tempo | O que se diz | O que se vê e lê |
-|---|---|---|
-| abertura | ...       | Vê: ... / Lê: ... |
-| desenvolvimento | ... | ... |
-| ...   | ...          | ... |
-| fecho | ...          | ... |
-
-LEGENDA DA PUBLICAÇÃO
-[texto, com a primeira linha a funcionar antes do corte do "ver mais"]
-
-ACESSIBILIDADE
-Legendas: [a rever à mão em ...] · Texto alternativo da capa: ... · Contraste: ...
-
-NOTAS DE RODAGEM
-Planos, luz, fundo, quantas coisas é preciso ter à mão antes de gravar.
-
-PASSAGEM PARA PRODUÇÃO
-Estado: proposto · seguir `../social-media-manager/references/14-producao-video-curto.md`
-com originais, projeto, master limpo, música, exportações e revisão ainda por executar.
+```text
+GUIÃO — [ID/título]
+Estado editorial: [rascunho | pronto-para-revisão-editorial | aprovado]
+Destino/intenção: [...]
+Blocos: [ação visual | fala/texto, se aplicáveis | duração proposta]
+Captação: [por executar / ativos disponíveis]
+Próxima etapa e pendências: [...]
 ```
 
-Terminar com **duas linhas**: o que foi tirado da referência e o que é original, e **o que ficou por verificar**. Numa área onde metade dos números publicados não tem origem, dizer o que não se sabe vale mais do que uma estimativa confiante.
-
-## Passo 6. Passo seguinte
-
-> Para captar, montar e exportar, segue o módulo 14. Para capa e primeiro fotograma, chama `capa-de-video` quando forem necessários.
-
-## Regras
-
-- **Português europeu** em tudo — incluindo o texto no ecrã e a legenda.
-- ⚠️ **Identificar conteúdo comercial.** ⬤ `#PUB` no início quando há dinheiro ou benefício de terceiro — é o que a lei exige. ◐ **"conteúdo promocional"** quando é a própria marca a promover produto, preço, campanha ou desconto — é política interna deste sistema, não redação imposta. **Não trocar as duas:** carimbar `#PUB` numa peça da própria marca afirma uma relação comercial que não existe e dilui a etiqueta onde ela é obrigatória. Se a peça não promove nada, não leva nada. Tabela dos três casos em `../social-media-manager/references/10-risco-crise-e-conformidade.md`.
-- **Vídeo curto, com rácio confirmado.** Não impor 9:16 a Shorts quadrados; TikTok fica `LOOK INTO`.
-- **Nunca parar por falta de integração.** É um acelerador, não um requisito.
-- **Nunca inventar métricas, transcrições ou estrutura do vídeo de referência.** Se a análise falhou, dizer que falhou.
-- **Nunca inventar números, resultados, prazos, preços ou casos de cliente** para o guião. Vêm do perfil.
-- Um gancho que o corpo não cumpre não se entrega — quebra a promessa. Medir o efeito na retenção e nas ações pretendidas, sem declarar um peso universal.
-- Uma ideia e uma chamada à ação por vídeo.
-- Descarregar ficheiros e publicar exigem autorização explícita do utilizador, sempre.
-- **Nunca reutilizar imagem, áudio ou texto do vídeo de referência.** Analisa-se a estrutura; copia-se nada.
-- **Nunca usar imagem de uma pessoa sem autorização escrita** — cliente, colaborador ou terceiro.
-- A camada de acessibilidade nunca é opcional e é a primeira a desaparecer com pressa. Por isso está na lista.
-- Não repetir números sem fonte. Os intervalos de corte que circulam ("um corte a cada 1,5-4 segundos") não têm estudo por trás: vale o princípio da mudança visual frequente, não o número.
-- Não resumir esta skill. Executá-la.
+Acrescentar legenda da publicação, capa e documentação completa apenas quando pedidas.
+Para captar, montar ou exportar, seguir
+`../social-media-manager/references/14-producao-video-curto.md`.

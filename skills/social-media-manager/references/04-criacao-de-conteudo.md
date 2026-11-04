@@ -13,7 +13,7 @@ Escrever e rever cada camada **em separado**, não a peça de uma assentada:
 1. **Gancho** — os primeiros segundos, ou a primeira linha antes do corte.
 2. **Promessa** — o que quem lê leva daqui.
 3. **Corpo** — a entrega dessa promessa, com prova.
-4. **Fecho e chamada à ação** — uma só, com atrito proporcional.
+4. **Fecho e chamada à ação, quando úteis** — uma intenção principal, com atrito proporcional.
 5. **Acessibilidade e metadados** — texto alternativo, legendas, contraste, descrição.
 
 Rever **de trás para a frente**: a chamada à ação é coerente com a promessa? O corpo cumpre-a? O gancho promete o que o corpo entrega? Se a resposta for não, corrige-se **o gancho**, não o corpo.
@@ -25,14 +25,14 @@ A camada 5 nunca é opcional e é a primeira a desaparecer com pressa. Por isso 
 ⬤ No explicador oficial publicado em 2023, o Instagram indicou, para Reels, previsões como a probabilidade de **reenviar** o vídeo, vê-lo até ao fim, gostar dele e ir à página do áudio. Para o Feed, descreveu previsões como passar alguns segundos na publicação, comentar, gostar, partilhar e tocar na foto de perfil. É um retrato histórico dos sinais publicados, não uma hierarquia atual nem um conjunto de pesos universais.
 https://about.instagram.com/blog/announcements/instagram-ranking-explained
 
-◐ Em vídeo curto, tornar a proposta percetível cedo e duplicar a informação essencial em som, imagem e texto melhora a clareza e a acessibilidade. Não atribuir um número universal de segundos ou um efeito de distribuição. TikTok está `LOOK INTO`.
+◐ Em vídeo curto, tornar a proposta percetível cedo. Escolher imagem, som e texto conforme a mensagem; não duplicar tudo por obrigação. Não atribuir um número universal de segundos ou um efeito de distribuição. TikTok está `LOOK INTO`.
 
 ⬤ Em 2020, a engenharia do LinkedIn documentou a incorporação do **tempo de permanência** (*dwell time*) e da probabilidade de saltar uma publicação nos modelos do Feed. https://www.linkedin.com/blog/engineering/feed/understanding-feed-dwell-time
 ◐ É um snapshot de uma plataforma fora da cobertura atual: não prova que o mesmo sinal exista noutras superfícies nem que texto mais longo tenha vantagem por si só. A aplicação defensável é estruturar bem o texto e medir na própria conta.
 
-### Três camadas em simultâneo
+### Imagem, som e texto conforme a função
 
-O gancho é o que **se vê**, o que **se ouve** e o que está **escrito no ecrã** — e as três têm de apontar para a mesma promessa. Erro mais comum: gancho só na voz, ecrã sem informação, e o vídeo perde toda a gente que está em silêncio.
+A abertura pode ser apenas visual. Quando existirem voz e texto, devem ser coerentes com a imagem; não os acrescentar sem função. Se a mensagem depender de fala ou som, preparar legendas ou equivalente. Sem fala nem informação sonora essencial, legendas podem ser não aplicáveis. Rever a compreensão sem som e a acessibilidade separadamente.
 
 ### Técnicas nomeadas ◐
 
@@ -77,7 +77,7 @@ Declarar a estrutura **antes** de escrever, não inferi-la depois. Um texto sem 
 
 ## Chamada à ação
 
-**Uma por peça.** Várias em simultâneo dividem a decisão e não se consegue nenhuma. ◐
+◐ Quando a peça pedir uma ação explícita, escolher uma principal. Uma peça contemplativa pode terminar sem CTA; testar o resultado em função do objetivo, sem garantir conversão.
 
 **Escada de atrito**, do mais barato ao mais caro:
 
@@ -112,13 +112,13 @@ Nunca produzir um formato porque é o que a plataforma está a empurrar este tri
 
 ## Escrever para ser reenviado
 
-◑ O gosto é uma reação; o guardado e o envio são **decisões com custo** — por isso valem mais, tanto para a distribuição como para o negócio.
+◐ Guardar e enviar podem revelar utilidade ou vontade de partilhar. O valor depende do objetivo e dos resultados na conta; não existe aqui evidência para lhes atribuir maior peso universal na distribuição ou no negócio.
 
 Conteúdo que é guardado ou reenviado tem uma função declarada para quem o guarda: serve para **voltar mais tarde** (referência utilizável) ou para **dizer algo sobre quem o envia** (moeda social, identificação, humor partilhado).
 
 Seis motores de partilha, úteis como lista de verificação antes de publicar — o modelo **STEPPS, de Jonah Berger** ◐ *(livro de divulgação com casos, não um conjunto de estudos replicados)*: moeda social · gatilhos do ambiente · emoção de alta ativação (espanto, indignação, riso — tristeza calma não) · visibilidade pública do comportamento · valor prático · histórias.
 
-Se uma peça não aciona nenhum, vai gerar gostos e parar aí. Em negócios pequenos, os dois mais acessíveis são quase sempre **valor prático** e **histórias**.
+Usar estes mecanismos como hipóteses criativas, não como condições necessárias para partilhas. Comparar as respostas da audiência à utilidade, às histórias e a outras abordagens relevantes para o caso.
 
 ## Produção visual sem orçamento
 
@@ -136,9 +136,9 @@ Telemóvel: bloquear foco e exposição antes de disparar, ligar a grelha, limpa
 
 ## Vídeo curto
 
-Guião em **duas colunas**: o que se diz | o que se vê e lê. Se a coluna do que se vê estiver vazia em qualquer bloco, o vídeo falha para quem está sem som.
+Usar `guiao-video-curto`: registar ação visual, fala e texto apenas quando tenham função. Duas colunas podem ajudar quando existe narração; não são obrigatórias para uma peça visual silenciosa.
 
-Blocos funcionais: abertura que torna cedo a proposta percetível nas três camadas · desenvolvimento que cumpre a promessa com mudanças visuais úteis · fecho e chamada à ação, quando necessários. As marcas de tempo são decisões do guião, não requisitos universais; registá-las depois de ler a fala e testar o corte.
+Blocos funcionais: abertura percetível na imagem e nos meios escolhidos · desenvolvimento que cumpre a promessa · fecho quando necessário. As marcas de tempo são decisões do guião; ajustá-las pelo ensaio e corte, sem impor mudanças de plano.
 
 **Calibrar a duração pela ideia, pelo objetivo, pela superfície e pelos dados reais da conta**, sem confundir limite técnico com duração recomendada. ◑ Num estudo de 2026, o tempo médio de visualização por Reel rondou 8,5 segundos numa amostra de 24,3 milhões de publicações de 375 mil contas geridas profissionalmente. É contexto de mercado, não um corte obrigatório para outra conta; serve para justificar economia narrativa e formular hipóteses de duração a testar.
 *Metricool, 24,3M de publicações de 375K contas geridas profissionalmente.* https://metricool.com/press-release-instagram-study-2026/

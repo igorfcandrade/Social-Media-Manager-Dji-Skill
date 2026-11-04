@@ -33,6 +33,13 @@ REQUIRED_FIELDS = (
 )
 
 EXPECTED_CONSUMERS = {
+    "PLAT-027": ("skills/social-media-manager/references/14-producao-video-curto.md",),
+    "PLAT-028": ("skills/social-media-manager/references/14-producao-video-curto.md",),
+    "PLAT-029": ("skills/social-media-manager/references/14-producao-video-curto.md",),
+    "PLAT-030": ("skills/social-media-manager/references/14-producao-video-curto.md",),
+    "PLAT-031": ("skills/social-media-manager/references/producao-video-ferramentas.md",),
+    "PLAT-032": ("skills/social-media-manager/references/producao-video-ferramentas.md",),
+    "PLAT-033": ("skills/social-media-manager/references/14-producao-video-curto.md",),
     "PLAT-001": (
         "skills/social-media-manager/references/05-plataformas.md",
     ),

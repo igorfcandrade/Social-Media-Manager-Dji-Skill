@@ -25,6 +25,10 @@ def skills_com_destino_multiplo() -> list[tuple[str, Path, str]]:
     encontradas = []
     for caminho in sorted(SKILLS.glob("*/SKILL.md")):
         texto = caminho.read_text(encoding="utf-8")
+        # O guião já recebe destinos em texto livre; não depende de um formulário.
+        if caminho.parent.name == 'guiao-video-curto':
+            encontradas.append((caminho.parent.name, caminho, texto))
+            continue
         for bruto in BLOCO_JSON.findall(texto):
             try:
                 perguntas = json.loads(bruto)
@@ -48,10 +52,8 @@ def skills_com_destino_multiplo() -> list[tuple[str, Path, str]]:
 class ContratoMulticanal(unittest.TestCase):
     """Se uma skill deixa escolher vários destinos, tem de dizer o que isso custa.
 
-    Decisão registada no ESTADO.md: manter o multiSelect e tornar o custo
-    explícito — uma peça por destino, e destinos fora da secção 4 do perfil
-    não se produzem. Este teste existe para a decisão não voltar a ficar
-    escrita sem estar aplicada.
+    Os destinos têm decisões explícitas; um ficheiro compatível pode ser reutilizado.
+    Estes são contratos documentais, não provas de comportamento do assistente.
     """
 
     def setUp(self) -> None:

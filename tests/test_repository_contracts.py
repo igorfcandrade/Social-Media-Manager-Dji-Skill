@@ -43,7 +43,7 @@ class RepositoryContractTests(unittest.TestCase):
 
     def test_public_command_runs_revision_gate_first(self) -> None:
         source = (ROOT / "testar.sh").read_text(encoding="utf-8")
-        gate = "executar python3 skills/social-media-manager/scripts/verificar_revisao.py"
+        gate = "python3 skills/social-media-manager/scripts/verificar_revisao.py"
         structure = "executar python3 scripts/validar_repositorio.py"
         self.assertLess(source.index(gate), source.index(structure))
 

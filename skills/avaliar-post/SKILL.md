@@ -54,7 +54,7 @@ Esperar. Não avaliar um texto imaginado.
   {"question": "Que comportamento é que esta peça tem de provocar?", "header": "Objetivo", "multiSelect": false,
    "options": [
      {"label": "Guardar", "description": "Conteúdo de referência a que se volta"},
-     {"label": "Enviar a alguém", "description": "O sinal mais forte para chegar a quem não segue"},
+     {"label": "Enviar a alguém", "description": "Criar algo útil para partilhar; medir envios sem presumir pesos de distribuição"},
      {"label": "Comentar ou perguntar", "description": "Abrir conversa, tipicamente para venda por mensagem"},
      {"label": "Ir ao link ou pedir orçamento", "description": "Ação fora da plataforma — o degrau mais caro"}
    ]}
