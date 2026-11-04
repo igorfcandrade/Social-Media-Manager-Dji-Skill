@@ -3,7 +3,7 @@ name: organizar-fotos-produtos
 description: "Audita sessões de fotografias e vídeos de produtos: identifica novos materiais e duplicados, avalia qualidade, atualiza o catálogo central e propõe seleção e utilizações. Prepara cortes, galeria e ZIP quando autorizados. Usa ao receber uma nova sessão ou pedir auditoria/preparação do acervo; não publica nem monitoriza pastas."
 ---
 
-# Organizar sessões de fotografias de produtos
+# Auditar sessões e preparar materiais visuais
 
 Executar o modo pedido com os dados disponíveis. Aplicar
 `../social-media-manager/references/contexto-do-caso.md`; não fixar marca, domínio, catálogo,
@@ -49,25 +49,31 @@ vivem no catálogo, não precisam de ser ditadas pelo utilizador nem caber no no
 
 ## 2. Sessão e originais
 
-Usar a raiz e convenções do caso. Sem convenção, propor este padrão para o lote solicitado:
+Usar a raiz e convenções do caso. Sem convenção, usar este padrão para o lote solicitado:
 
 ```text
-[raiz]/AAAA/MM-MES/AAAA-MM-DD-Sessao-Tema/Nome-do-Artigo-Variacao/
-  originais/
-  1x1/
-  3x4/
-  9x16/
-  catalogo.json
-  catalogo.csv
-  galeria-comparacao.html
+[raiz]/AAAA/MM-MES/AAAA-MM-DD-Sessao-Tema/
+  relatorio-sessao.md
+  Nome-do-Artigo-Variacao/
+    originais/
+    1x1/
+    3x4/
+    9x16/
+    catalogo.json
+    catalogo.csv
+    galeria-comparacao.html
 ```
+
+As pastas de formatos e a galeria de cortes só são necessárias na preparação. Uma auditoria
+termina com relatório, seleção visual e estado do catálogo, sem exigir esses derivados.
 
 Separar artigo/variação quando necessário; omitir repetição do tema. Usar data indicada,
 senão consultar a captação. Guardar separadamente data da sessão, da câmara e da exportação;
-não corrigir divergências em silêncio. Acrescentar só o lote pedido.
+não corrigir divergências em silêncio. Acrescentar só o lote pedido, sem reorganizar sessões
+anteriores sem pedido.
 
 Guardar em `originais` cópias byte a byte de todos os ficheiros recebidos, com nomes e
-formatos intactos, incluindo RAW/JPEG emparelhados. Não mover, substituir ou apagar a origem.
+formatos intactos, incluindo RAW/JPEG emparelhados e vídeos. Não mover, substituir ou apagar a origem.
 Inventariar as entradas antes de selecionar, comparar com o catálogo e verificar hashes após copiar.
 Distinguir duplicados exatos de imagens semelhantes; não eliminar nem fundir por semelhança. Nomes iguais com
 conteúdos diferentes usam subpastas de proveniência, sem sobrescrita.
@@ -86,7 +92,8 @@ Começar por plano aberto com a peça inteira, base relevante e ambiente. Altern
 detalhes úteis sem preencher contagens com repetições. Cada número identifica a mesma vista
 nos formatos; se um corte faltar, conservar a lacuna e explicar, não trocar a vista.
 
-Compor cada formato visualmente a partir do original ou da renderização integral fiel.
+Compor cada formato visualmente a partir do original, da sua renderização integral fiel ou
+do master editado aprovado, identificando a fonte imediata e a versão usada.
 Não gerar um formato a partir de outro derivado, nem aplicar corte central a todo o lote.
 Um original pode alimentar vistas distintas, identificadas por número e descrição.
 
