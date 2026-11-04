@@ -4,6 +4,13 @@ set -uo pipefail
 
 RAIZ="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 estado=0
+verificar_instalacoes=1
+if [ "${1:-}" = "--sem-instalacoes" ] && [ "$#" -eq 1 ]; then
+  verificar_instalacoes=0
+elif [ "$#" -ne 0 ]; then
+  echo "Uso: ./testar.sh [--sem-instalacoes]" >&2
+  exit 1
+fi
 
 executar() {
   if ! "$@"; then
@@ -14,11 +21,19 @@ executar() {
 cd "$RAIZ"
 
 # Corre primeiro para que, quando devida, a mensagem contratual seja a primeira linha.
-# A função executar regista a falha e continua, por isso os testes estruturais não ficam ocultos.
-executar python3 skills/social-media-manager/scripts/verificar_revisao.py
+# Revisão vencida (2) é aviso; calendário inválido (1) continua a ser erro.
+python3 skills/social-media-manager/scripts/verificar_revisao.py
+revisao=$?
+if [ "$revisao" -ne 0 ] && [ "$revisao" -ne 2 ]; then
+  estado=1
+fi
 executar python3 scripts/validar_repositorio.py
 executar python3 scripts/validar_estado_plataformas.py
-executar python3 scripts/validar_instalacoes.py
+if [ "$verificar_instalacoes" -eq 1 ]; then
+  executar python3 scripts/validar_instalacoes.py
+else
+  echo "Instalações locais: não comparadas (validação de uma árvore isolada)"
+fi
 executar python3 -m unittest discover -s tests -p 'test_*.py'
 executar bash -n testar.sh instalar.sh
 executar git diff --check

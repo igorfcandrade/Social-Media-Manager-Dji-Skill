@@ -1,6 +1,6 @@
 # Social Media Skills (PT-PT)
 
-Conjunto de **20 skills** de gestão de redes sociais em português de Portugal, portáteis entre
+Conjunto de **21 skills** de gestão de redes sociais em português de Portugal, portáteis entre
 ambientes que consigam carregar skills em Markdown.
 
 Uma skill **governa**, uma **prepara o contexto factual** e dezoito **executam**. O ofício vive nas skills; os factos do caso chegam
@@ -15,6 +15,7 @@ interação e execução. As três camadas nunca se misturam.
 | **Voz e contexto** | `construir-voz` · `voz-newsletter` · `sistema-contexto-conteudo` |
 | **Escrita** | `escrever-post` · `formatar-post` · `gerar-ganchos` · `comentario-fixado` |
 | **Vídeo curto** | `guiao-video-curto` · `capa-de-video` |
+| **Sessões e acervo visual** | `organizar-fotos-produtos` — auditoria, preservação, cortes e entrega |
 | **Visual** | `photo-first-art-direction` · `design-grafico` · `carrossel` · `infografico` · `post-de-citacao` |
 | **Perfis e dados** | `otimizar-perfil` · `painel-metricas` · `avaliar-post` |
 

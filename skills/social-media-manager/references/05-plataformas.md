@@ -6,7 +6,7 @@ Como cada superfície decide o que mostra a quem, o que está **declarado** pela
 
 **Delegabilidade:** ✓ Alta, com uma condição: esta área envelhece mais depressa do que qualquer memória. **Nunca responder de memória sobre algoritmos** — quase de certeza cita-se uma regra revogada. Exigir sempre fonte datada e nível de confiança.
 
-> ⚠️ Este módulo explica o método e guarda contexto. O estado atual dos factos voláteis vive em `05-estado-das-plataformas.md`. Uma data de publicação não é automaticamente a data efetiva, e nenhuma revisão interna prevê a próxima mudança da plataforma. A cobertura validada inclui Instagram, Facebook, Graph API, Google Business Profile, WhatsApp, YouTube e Pinterest. TikTok, Threads e X estão `LOOK INTO` e não fornecem regras atuais.
+> ⚠️ Este módulo explica o método e guarda contexto. O estado atual dos factos voláteis vive em `05-estado-das-plataformas.md`. Uma data de publicação não é automaticamente a data efetiva, e nenhuma revisão interna prevê a próxima mudança da plataforma. A cobertura validada inclui Instagram, Facebook, Graph API, Google Business Profile, WhatsApp, YouTube e Pinterest. TikTok, Threads e X estão `LOOK INTO` para cobertura geral; a exceção limitada de música comercial está em PLAT-027.
 
 ## Três verdades estruturais
 
@@ -41,7 +41,7 @@ A separação mais útil de toda a área: chegar a quem já segue e chegar a que
 
 ## Escada de sinais
 
-Hierarquia prática, do gesto mais barato ao mais caro para quem vê. Quanto mais caro o gesto, mais peso costuma ter na distribuição a não-seguidores:
+Grelha de intenções para planear a peça. Não é uma hierarquia de pesos na distribuição:
 
 ```
 ver (retenção, dwell time) → reagir → aprofundar (comentar, guardar) → propagar (enviar, partilhar)
@@ -95,7 +95,7 @@ Ocultar, escolher “Não tenho interesse” e outros controlos dão feedback ao
 
 ## TikTok
 
-**LOOK INTO.** Fora da cobertura atual. Não usar este módulo para afirmar algoritmo, pesquisa, limites, formatos ou funcionalidades atuais do TikTok. Uma revisão futura exige autorização e fontes oficiais datadas.
+**LOOK INTO.** Algoritmo, pesquisa, limites e formatos gerais do TikTok não estão validados. A exceção delimitada é a música comercial (PLAT-027); a divulgação comercial continua por verificar (PLAT-028). Não extrapolar estas entradas para regras gerais.
 
 ## YouTube
 
@@ -163,12 +163,12 @@ Fazer a pesquisa de palavras **dentro da própria plataforma** (barra de pesquis
 ## Lista de conformidade antes de publicar
 
 - [ ] Sem marca de água de outra aplicação
-- [ ] Sem bordas; resolução adequada; com som
-- [ ] Não é republicação de conteúdo já publicado
+- [ ] Resolução, recorte e legibilidade adequados; som apenas quando cumpre uma função
+- [ ] Originalidade e eventuais republicações avaliadas no âmbito da superfície
 - [ ] Contribuição criativa real, se o material tem origem em terceiros
 - [ ] Hashtags dentro do limite confirmado na plataforma ou conta
 - [ ] Sem engagement bait explícito
-- [ ] Texto alternativo e legendas
+- [ ] Texto alternativo/equivalente e legendas quando aplicáveis; fala essencial transcrita
 - [ ] Rácio e duração corretos para a superfície pretendida
 - [ ] Rótulo de IA, se aplicável
 

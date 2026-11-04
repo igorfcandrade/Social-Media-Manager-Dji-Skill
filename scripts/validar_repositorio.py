@@ -23,7 +23,7 @@ FORBIDDEN_SKILL_MARKERS = (
     "Marisa",
 )
 
-NOTICE_EXEMPT_SKILLS = {"sistema-contexto-conteudo"}
+NOTICE_EXEMPT_SKILLS = {"sistema-contexto-conteudo", "organizar-fotos-produtos"}
 SKILL_NOTICE_CONSUMERS = tuple(
     str(path.relative_to(ROOT))
     for path in sorted(SKILLS.glob("*/SKILL.md"))

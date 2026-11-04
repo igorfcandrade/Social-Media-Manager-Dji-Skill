@@ -34,9 +34,19 @@ O percurso pode entregar:
 8. ficha de música e direitos;
 9. relatório de revisão.
 
-Estados permitidos: `proposto`, `pronto-para-captar`, `captado`, `montagem`, `pronto-para-revisão`,
-`aprovado` e `bloqueado`. `Pronto-para-revisão` exige um ficheiro real inspecionável; uma lista de
-planos ou simulação nunca recebe esse estado.
+Associar o estado ao **objeto** revisto:
+
+| Objeto | Pronto para revisão quando… |
+|---|---|
+| Brief/guião | existem texto, intenção, fontes e decisões editoriais; não exige captação |
+| Lista de planos | cada plano tem ação, continuidade e critério de aceitação |
+| Montagem/exportação | há ficheiro real acessível e cobertura de inspeção declarada |
+| Publicação | revisão editorial, técnica, direitos e pré-visualização por destino concluídas |
+
+Usar `proposto`, `pronto-para-captar`, `captado`, `montagem`, `pronto-para-revisão`,
+`aprovado` ou `bloqueado` com o objeto indicado. Um guião aprovado não aprova o vídeo final.
+`SIMULADO` descreve dados fictícios ou placeholders; uma proposta editorial baseada em factos
+reais não é simulação só por faltar filmar. Manter captação/exportação como pendentes.
 
 ## 1. Congelar o brief
 
@@ -83,22 +93,9 @@ Antes de gravar:
 - preparar peça, fundo, luz, adereços e sequência para evitar mudanças de continuidade;
 - fazer um teste curto e vê-lo no próprio telefone com e sem som antes de captar o lote.
 
-### Percurso iPhone, quando for o meio disponível
+### Percurso iPhone
 
-⬤ A Apple documenta Auto FPS, HDR, bloqueio de câmara e bloqueio do balanço de brancos. Em pouca luz, Auto FPS pode reduzir 30 fps para 24 fps; confirmar a definição no modelo e versão em uso. [Apple, relido em 2026-09-10](https://support.apple.com/guide/iphone/change-video-recording-settings-iphc1827d32f/26/ios/26)
-
-- `[PRODUÇÃO]` Para um primeiro ensaio simples, 1080p/30 fps e SDR podem reduzir peso e surpresas
-  de cor. Confirmar que o editor aceita os originais e que o ficheiro mantém detalhe suficiente.
-- `[PRODUÇÃO]` Usar 4K quando o reenquadramento ou o detalhe o justificarem e houver espaço, tempo
-  de transferência e desempenho de edição. Não o associar a maior alcance.
-- `[PRODUÇÃO]` Bloquear foco/exposição e, quando a luz for constante, o balanço de brancos, se o
-  aparelho e a situação o permitirem. Evitar misturar HDR e SDR no mesmo ensaio sem testar o fluxo.
-- `[HIPÓTESE]` Comparar aparelhos, lentes ou modos só com a mesma cena, luz e configuração, e julgar
-  cor, foco, detalhe, ruído, estabilidade, peso do ficheiro e tempo de edição — não visualizações.
-
-Recursos avançados, como ProRes, macro ou câmara lenta, entram apenas perante necessidade concreta.
-⬤ A Apple avisa que ProRes pode ocupar até 30 vezes mais espaço do que HEVC.
-[Apple, relido em 2026-09-10](https://support.apple.com/en-us/109041)
+Se for o aparelho disponível, usar [o percurso opcional](producao-video-ferramentas.md) e PLAT-031/PLAT-032 no registo 05. Não carregar as instruções de outros equipamentos.
 
 ## 4. Ingerir e conferir originais
 
@@ -111,7 +108,7 @@ correspondência com `PLANO-###` e take. Antes de editar, conferir pelo menos:
 - voz/som utilizável e ausência de música ambiente não licenciada;
 - direitos e consentimentos de tudo o que aparece.
 
-Registar `REAL` para ficheiros inspecionados e `SIMULADO` para placeholders ou descrições. Nunca
+Registar `REAL` com a cobertura da inspeção (metadados, amostras ou duração completa) e `SIMULADO` para placeholders fictícios. Nunca
 apresentar uma simulação como captação ou exportação concluída.
 
 ## 5. Montar no editor disponível
@@ -122,21 +119,7 @@ quando o corte muda.
 
 ### Caminho manual no Canva
 
-⬤ O Canva documenta no seu editor móvel cortar, dividir, reorganizar clips na timeline, sincronizar áudio, pré-visualizar e descarregar MP4 sem marca de água nas condições dos elementos/plano usados. [Canva, relido em 2026-09-10](https://www.canva.com/video-editor/mobile-app/)
-
-1. Criar um design de vídeo no rácio decidido e carregar os originais autorizados.
-2. Colocar os clips pela ordem da lista de planos; aparar e dividir pela intenção do guião.
-3. Ver o corte sem música. Remover repetições e confirmar que a mensagem não depende do áudio.
-4. Ajustar exposição/cor apenas o necessário para continuidade e fidelidade ao objeto real.
-5. Inserir texto só quando acrescenta informação; aplicar a direção visual do caso e verificar as
-   zonas da interface na aplicação de destino.
-6. Gerar ou inserir legendas, rever palavra a palavra e ajustar o tempo manualmente.
-7. Tratar voz, som ambiente e música; confirmar a ficha de direitos antes de incorporar a faixa.
-8. Duplicar o projeto antes de uma adaptação que mude corte, texto integrado, rácio ou música.
-9. Pré-visualizar no Canva e descarregar o `MASTER-LIMPO`; conferir o ficheiro descarregado, não
-   apenas a timeline.
-
-O produto Canva ter uma função não significa que um conector a consiga executar.
+Usar [o percurso opcional](producao-video-ferramentas.md) quando este for o editor escolhido (PLAT-030). O produto ter uma função não significa que um conector a consiga executar.
 
 ### Caminho assistido por conector
 
@@ -180,9 +163,7 @@ Criar uma ficha por faixa, mesmo quando é gratuita:
 | Prova | licença, indicação da biblioteca ou contrato guardado |
 | Estado | autorizado / `POR_CONFIRMAR` / rejeitado |
 
-⬤ No Canva, a indicação `Commercial use allowed` identifica Stock Music sujeita ao Content License Agreement; `Popular music · Only personal use allowed` não permite uso comercial/promocional nas redes. A subscrição paga, por si, não muda esta distinção. [Canva Popular Music License, relida em 2026-09-10](https://www.canva.com/policies/popular-music-license/)
-
-⬤ No TikTok, as regras gerais da plataforma continuam `LOOK INTO`; para conteúdo que promova uma marca, produto ou serviço, a política oficial recomenda a Commercial Music Library e exige confirmação de direitos quando se usa música fora dela. A CML deve ser filtrada por região e colocação; não presumir licença fora do TikTok. [TikTok, relido em 2026-09-10](https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/commercial-use-of-music-on-tiktok?lang=en) · [CML, atualizada em julho de 2026 e relida em 2026-09-10](https://ads.tiktok.com/resources/help/article/how-to-use-the-commercial-music-library?lang=en-GB)
+Consultar **PLAT-029** para licenciamento Canva e **PLAT-027/PLAT-028** para música e divulgação comercial no TikTok (`LOOK INTO` para os restantes aspetos). Confirmar a faixa, uso, região e destino concretos; uma subscrição não substitui esta verificação.
 
 Para Meta e YouTube, aplicar o módulo 10. Uma licença restrita a uma superfície não entra no
 `MASTER-LIMPO`; acrescenta-se na versão desse destino.
@@ -205,9 +186,7 @@ Se o mesmo ficheiro limpo satisfizer os requisitos confirmados, direitos e pré-
 duas superfícies, reutilizá-lo e registar duas colocações sobre a mesma `EXP-###`. Adaptar a legenda
 da publicação não obriga a reexportar o vídeo.
 
-⬤ As especificações orgânicas atuais de Instagram não foram relidas: a página oficial devolveu
-erro 429 em 2026-09-10. Confirmar rácio, limites e pré-visualização na conta antes de publicar.
-[Instagram — fonte oficial a reconfirmar](https://help.instagram.com/1038071743007909)
+Consultar **PLAT-033** para o estado das especificações de Instagram. Confirmar requisitos e pré-visualização antes da entrega por destino; um acesso falhado não é confirmação.
 
 As regras gerais orgânicas de TikTok continuam `LOOK INTO`: preparar uma hipótese 9:16 pode ser
 uma decisão de produção, mas duração, capa, caixas da interface e aceitação do ficheiro confirmam-se

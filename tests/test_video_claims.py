@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 class VideoClaimsTests(unittest.TestCase):
     def setUp(self) -> None:
         self.paths = (
+            ROOT / "skills" / "social-media-manager" / "SKILL.md",
+            ROOT / "skills" / "social-media-manager" / "references" / "14-producao-video-curto.md",
             ROOT / "skills" / "social-media-manager" / "references" / "04-criacao-de-conteudo.md",
             ROOT / "skills" / "guiao-video-curto" / "SKILL.md",
             ROOT / "skills" / "capa-de-video" / "SKILL.md",
@@ -25,6 +27,7 @@ class VideoClaimsTests(unittest.TestCase):
             "3 a 5 palavras.** Seis é o limite absoluto",
             "o único segundo que decide tudo",
             "o sinal que mais pesa",
+            "O sinal mais forte para chegar a quem não segue",
             "20 a 40 segundos, dois pontos no máximo, nunca três",
         ):
             self.assertNotIn(claim, self.text)

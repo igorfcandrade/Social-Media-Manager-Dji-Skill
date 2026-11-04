@@ -4,14 +4,14 @@
 
 ## Calendário
 
-- **Estado:** em dia para a cobertura declarada
+- **Estado:** revisão geral pendente; atualização parcial de produção em 2026-11-04
 - **Última revisão concluída:** 2026-09-03
 - **Próxima revisão programada:** 2026-10-01
 - **Revisões concluídas:** 4 — linha de base · expansão a Google, WhatsApp, YouTube e Pinterest · expansão ao pago · correção dirigida da segmentação Meta
 - **Responsável humano:** `POR DEFINIR` — o nome vem do perfil da marca deste projeto, não desta skill
-- **Último recap:** recaps-plataformas/2026-09-03.md
+- **Último recap:** recaps-plataformas/2026-11-04.md
 - **Cobertura atual:** Meta orgânico — Instagram e Facebook —, governação da Graph API, Google Business Profile, WhatsApp, YouTube e Pinterest; e **mecânica de campanha paga** na Meta, Google Ads e Pinterest — limiares de aprendizagem e medição e, na Meta, segmentação de audiência e exclusões, **não** custos, leilão, benchmarks nem formatos criativos
-- **Fora da cobertura atual:** TikTok, Threads e X — `LOOK INTO`; não usar afirmações de plataforma sem uma revisão autorizada
+- **Fora da cobertura geral:** TikTok, Threads e X — `LOOK INTO`; exceção limitada à música comercial em PLAT-027, com divulgação ainda por verificar em PLAT-028. Não extrapolar para ranking, formatos ou limites
 
 A revisão programada é um controlo interno de qualidade, não a previsão de uma alteração da plataforma. Uma data vencida gera um aviso; não autoriza pesquisa externa, acesso à conta nem alteração de ficheiros. Sempre que uma decisão dependa de um facto mais recente, a verificação no ponto de uso ganha ao calendário.
 
@@ -70,6 +70,14 @@ Os IDs são estáveis. Não renumerar nem apagar um facto substituído; atualiza
 | PLAT-024 | Google Ads · ações locais | disponibilidade das visitas à loja | ativo |
 | PLAT-025 | Meta Ads · Marketing API | remoção das exclusões de segmentação detalhada | ativo |
 | PLAT-026 | Meta Ads · Advantage+ audience | sugestões, expansão e controlos rígidos | ativo; opções originais/manuais condicionais ao contexto |
+
+| PLAT-027 | TikTok · CML | licença comercial | ativo |
+| PLAT-028 | TikTok · divulgação comercial | política de divulgação | por verificar |
+| PLAT-029 | Canva · música | licenciamento | ativo |
+| PLAT-030 | Canva · editor móvel de vídeo | funções de produto | condicional |
+| PLAT-031 | Apple · Câmara iPhone | definições de captação | por verificar |
+| PLAT-032 | Apple · ProRes iPhone | capacidade e armazenamento | condicional |
+| PLAT-033 | Instagram · Reels orgânicos | especificações de entrega | por verificar |
 
 ## Plataformas em espera
 
@@ -533,6 +541,129 @@ Os IDs são estáveis. Não renumerar nem apagar um facto substituído; atualiza
 - **Confiança:** ⬤ quanto ao comportamento documentado de Advantage+ audience e aos controlos rígidos anunciados; a disponibilidade de opções originais/manuais é condicional ao âmbito declarado.
 - **Estado:** ativo; opções originais/manuais condicionais ao contexto e ao interface.
 - **Implicação:** tratar interesses e outros sinais de Advantage+ audience como sugestões, não como garantia de exclusão ou inclusão. Para limites que têm de ser rígidos, usar apenas controlos que o interface apresente como tal; confirmar a campanha concreta. Não atribuir esta arquitetura a uma alteração universal de fevereiro de 2026.
+
+
+### PLAT-027 — TikTok · CML
+
+- **Plataforma / superfície:** TikTok · CML.
+- **Tipo de afirmação:** licença comercial.
+- **Afirmação atual:** A biblioteca geral não cobre uso comercial por empresas. A Commercial Music Library é a biblioteca indicada para atividades comerciais, incluindo conteúdo orgânico, anúncios e branded content. Sons de terceiros fora dela exigem direitos próprios.
+- **Volatilidade:** média; confirmar no ponto de uso.
+- **Âmbito:** apenas produto, política e superfícies descritos na fonte; não é autorização de uma conta ou faixa concreta.
+- **Fonte primária:** https://ads.tiktok.com/resources/help/article/commercial-music-library
+- **Publicado em:** 2025-07 (atualização indicada).
+- **Efetivo em:** não declarada.
+- **Rollout:** não declarado; disponibilidade concreta por confirmar quando aplicável.
+- **Fonte relida em:** 2026-11-04.
+- **Rever quando:** decisão depender desta política, função ou compatibilidade, ou surgir alteração oficial.
+- **Confiança:** ⬤ fonte oficial relida; não verifica qualquer faixa concreta.
+- **Estado:** ativo.
+- **Implicação:** Confirmar faixa, uso, colocação, região e prova. Não extrapolar a licença para outro destino.
+
+### PLAT-028 — TikTok · divulgação comercial
+
+- **Plataforma / superfície:** TikTok · divulgação comercial.
+- **Tipo de afirmação:** política de divulgação.
+- **Afirmação atual:** A identificação comercial do conteúdo deve ser verificada na política e interface atuais antes da publicação. O registo anterior não basta para confirmar hoje rótulos, disponibilidade ou efeitos de distribuição.
+- **Volatilidade:** média; confirmar no ponto de uso.
+- **Âmbito:** apenas produto, política e superfícies descritos na fonte; não é autorização de uma conta ou faixa concreta.
+- **Fonte primária:** https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/promoting-a-brand-product-or-service/
+- **Publicado em:** não declarada.
+- **Efetivo em:** não declarada.
+- **Rollout:** não declarado; disponibilidade concreta por confirmar quando aplicável.
+- **Fonte relida em:** não concluída nesta revisão.
+- **Acesso tentado em:** 2026-11-04; não equivale a releitura.
+- **Rever quando:** decisão depender desta política, função ou compatibilidade, ou surgir alteração oficial.
+- **Confiança:** ◐ acesso não concluído; nenhuma alegação nova confirmada.
+- **Estado:** por verificar.
+- **Implicação:** Preparar a peça e manter identificação comercial pendente; não afirmar efeitos no alcance.
+
+### PLAT-029 — Canva · música
+
+- **Plataforma / superfície:** Canva · música.
+- **Tipo de afirmação:** licenciamento.
+- **Afirmação atual:** Stock Music identificada como Commercial use allowed segue o Content License Agreement. Popular Music não permite uso comercial/promocional nas redes; a subscrição paga não elimina essa restrição.
+- **Volatilidade:** média; confirmar no ponto de uso.
+- **Âmbito:** apenas produto, política e superfícies descritos na fonte; não é autorização de uma conta ou faixa concreta.
+- **Fonte primária:** https://www.canva.com/policies/popular-music-license/
+- **Publicado em:** 2025-01-31 (última atualização indicada).
+- **Efetivo em:** não declarada.
+- **Rollout:** não declarado; disponibilidade concreta por confirmar quando aplicável.
+- **Fonte relida em:** 2026-11-04.
+- **Rever quando:** decisão depender desta política, função ou compatibilidade, ou surgir alteração oficial.
+- **Confiança:** ⬤ fonte oficial relida; autorização concreta depende da faixa e do uso.
+- **Estado:** ativo.
+- **Implicação:** Abrir informações da faixa e guardar licença aplicável, uso e destino; não usar Popular Music para promover a marca.
+
+### PLAT-030 — Canva · editor móvel de vídeo
+
+- **Plataforma / superfície:** Canva · editor móvel de vídeo.
+- **Tipo de afirmação:** funções de produto.
+- **Afirmação atual:** A página do editor móvel documenta trim, split, reorganização de clips, legendas automáticas, sincronização de áudio, pré-visualização e download MP4. Isto não documenta as operações de qualquer conector.
+- **Volatilidade:** média; confirmar no ponto de uso.
+- **Âmbito:** apenas produto, política e superfícies descritos na fonte; não é autorização de uma conta ou faixa concreta.
+- **Fonte primária:** https://www.canva.com/video-editor/mobile-app/
+- **Publicado em:** não declarada.
+- **Efetivo em:** não declarada.
+- **Rollout:** não declarado; disponibilidade concreta por confirmar quando aplicável.
+- **Fonte relida em:** 2026-11-04.
+- **Rever quando:** decisão depender desta política, função ou compatibilidade, ou surgir alteração oficial.
+- **Confiança:** ⬤ página oficial relida; interface e elegibilidade não testadas neste registo.
+- **Estado:** condicional.
+- **Implicação:** Verificar o editor real e o resultado descarregado. Inspecionar ferramentas expostas e testar antes de prometer automatização.
+
+### PLAT-031 — Apple · Câmara iPhone
+
+- **Plataforma / superfície:** Apple · Câmara iPhone.
+- **Tipo de afirmação:** definições de captação.
+- **Afirmação atual:** A releitura das definições de vídeo não foi concluída. Não garantir disponibilidade de Auto FPS, HDR, bloqueio de câmara ou balanço de brancos num modelo/versão por memória.
+- **Volatilidade:** média; confirmar no ponto de uso.
+- **Âmbito:** apenas produto, política e superfícies descritos na fonte; não é autorização de uma conta ou faixa concreta.
+- **Fonte primária:** https://support.apple.com/guide/iphone/change-video-recording-settings-iphc1827d32f/26/ios/26
+- **Publicado em:** não declarada.
+- **Efetivo em:** não declarada.
+- **Rollout:** não declarado; disponibilidade concreta por confirmar quando aplicável.
+- **Fonte relida em:** não concluída nesta revisão.
+- **Acesso tentado em:** 2026-11-04; não equivale a releitura.
+- **Rever quando:** decisão depender desta política, função ou compatibilidade, ou surgir alteração oficial.
+- **Confiança:** ◐ acesso 429; opções dependem do modelo e versão.
+- **Estado:** por verificar.
+- **Implicação:** Conferir no aparelho, fazer um clip curto e testar ingestão/cores; isto não impede preparar o guião.
+
+### PLAT-032 — Apple · ProRes iPhone
+
+- **Plataforma / superfície:** Apple · ProRes iPhone.
+- **Tipo de afirmação:** capacidade e armazenamento.
+- **Afirmação atual:** ProRes é limitado aos modelos e modos listados pela Apple e pode ocupar até 30 vezes o espaço de HEVC. Não o escolher por defeito para vídeo social.
+- **Volatilidade:** média; confirmar no ponto de uso.
+- **Âmbito:** apenas produto, política e superfícies descritos na fonte; não é autorização de uma conta ou faixa concreta.
+- **Fonte primária:** https://support.apple.com/en-us/109041
+- **Publicado em:** não declarada.
+- **Efetivo em:** não declarada.
+- **Rollout:** não declarado; disponibilidade concreta por confirmar quando aplicável.
+- **Fonte relida em:** 2026-11-04.
+- **Rever quando:** decisão depender desta política, função ou compatibilidade, ou surgir alteração oficial.
+- **Confiança:** ⬤ fonte oficial relida; equipamento e editor do caso não testados.
+- **Estado:** condicional.
+- **Implicação:** Confirmar modelo, modo, armazenamento e compatibilidade. A capacidade técnica não prova benefício de alcance.
+
+### PLAT-033 — Instagram · Reels orgânicos
+
+- **Plataforma / superfície:** Instagram · Reels orgânicos.
+- **Tipo de afirmação:** especificações de entrega.
+- **Afirmação atual:** Não há nesta revisão confirmação dos limites atuais da página oficial. Não substituir por especificações de anúncios nem por recomendações de produção.
+- **Volatilidade:** média; confirmar no ponto de uso.
+- **Âmbito:** apenas produto, política e superfícies descritos na fonte; não é autorização de uma conta ou faixa concreta.
+- **Fonte primária:** https://help.instagram.com/1038071743007909
+- **Publicado em:** não declarada.
+- **Efetivo em:** não declarada.
+- **Rollout:** não declarado; disponibilidade concreta por confirmar quando aplicável.
+- **Fonte relida em:** não concluída nesta revisão.
+- **Acesso tentado em:** 2026-11-04; não equivale a releitura.
+- **Rever quando:** decisão depender desta política, função ou compatibilidade, ou surgir alteração oficial.
+- **Confiança:** ◐ acesso 429; requisitos atuais por confirmar.
+- **Estado:** por verificar.
+- **Implicação:** Preparar master conforme objetivo e testar aceitação/prévia na conta antes da entrega por destino.
 
 ## Como acrescentar ou atualizar um registo
 
